@@ -14,6 +14,9 @@ make pdf
 
 The compiled presentation is written to `build/main.pdf`.
 
+The repository also includes the latest compiled release as
+`open-science-presentation.pdf` for immediate viewing and download.
+
 For automatic recompilation while editing:
 
 ```bash
