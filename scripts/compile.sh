@@ -18,4 +18,7 @@ if [[ ! -s build/main.pdf ]]; then
   exit 1
 fi
 
+cp build/main.pdf open-science-presentation.pdf
+
 echo "PDF created at: $project_dir/build/main.pdf"
+echo "Viewer copy updated at: $project_dir/open-science-presentation.pdf"
