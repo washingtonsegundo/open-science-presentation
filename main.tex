@@ -906,17 +906,9 @@
 \end{frame}
 
 % 31 -------------------------------------------------------------------------
-{\setbeamertemplate{background}{}
 \begin{frame}{License and reuse}
-  \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=south east] at ([xshift=-.38cm,yshift=.43cm]current page.south east)
-      {\includegraphics[width=.78cm]{assets/cc-by-nc-sa-4.0.png}};
-    \node[anchor=south east,font=\scriptsize,text=Teal] at
-      ([xshift=-.38cm,yshift=2.98cm]current page.south east)
-      {\href{\ccLicenseURL}{License deed (PT-BR)}};
-  \end{tikzpicture}
   \vspace{0.52cm}
-  \begin{minipage}{.72\textwidth}
+  \begin{minipage}{.82\textwidth}
     {\Large\bfseries\color{Navy}Creative Commons}\par
     \vspace{0.12cm}
     {\large\color{Ink}Attribution--NonCommercial--ShareAlike 4.0 International}\par
@@ -927,6 +919,55 @@
 
     {\small\color{Muted}Author: Washington L. de Carvalho Segundo}
   \end{minipage}
+\end{frame}
+
+% 32 -------------------------------------------------------------------------
+{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[Teal] (current page.south west) rectangle ([xshift=.16cm]current page.north west);
+
+    \node[font=\fontsize{30}{34}\selectfont\bfseries,text=Navy]
+      at ([yshift=1.18cm]current page.center) {Obrigado!};
+    \node[font=\small\bfseries,text=Teal]
+      at ([yshift=.57cm]current page.center) {KNOWLEDGE GROWS WHEN IT IS SHARED};
+
+    \node[align=center,text=Navy] at ([xshift=-4.55cm,yshift=-.15cm]current page.center)
+      {\large Aguyjevete\\[-1pt]\scriptsize\color{Muted}Guarani};
+    \node[align=center,text=Navy] at ([xshift=-2.75cm,yshift=-.15cm]current page.center)
+      {\large Sulpayki\\[-1pt]\scriptsize\color{Muted}Quechua};
+    \node[align=center,text=Navy] at ([xshift=-.90cm,yshift=-.15cm]current page.center)
+      {\large Gracias\\[-1pt]\scriptsize\color{Muted}Spanish};
+    \node[align=center,text=Navy] at ([xshift=.90cm,yshift=-.15cm]current page.center)
+      {\large Obrigado\\[-1pt]\scriptsize\color{Muted}Portuguese};
+    \node[align=center,text=Navy] at ([xshift=2.75cm,yshift=-.15cm]current page.center)
+      {\large Dhanyavaad\\[-1pt]\scriptsize\color{Muted}Hindi};
+    \node[align=center,text=Navy] at ([xshift=4.55cm,yshift=-.15cm]current page.center)
+      {\large Xiexie\\[-1pt]\scriptsize\color{Muted}Chinese};
+
+    \node[align=center,text=Navy] at ([xshift=-4.55cm,yshift=-1.40cm]current page.center)
+      {\large Asante\\[-1pt]\scriptsize\color{Muted}Swahili / Bantu};
+    \node[align=center,text=Navy] at ([xshift=-2.75cm,yshift=-1.40cm]current page.center)
+      {\large Ngiyabonga\\[-1pt]\scriptsize\color{Muted}Zulu / Bantu};
+    \node[align=center,text=Navy] at ([xshift=-.90cm,yshift=-1.40cm]current page.center)
+      {\large E se\\[-1pt]\scriptsize\color{Muted}Yoruba};
+    \node[align=center,text=Navy] at ([xshift=.90cm,yshift=-1.40cm]current page.center)
+      {\large Nagode\\[-1pt]\scriptsize\color{Muted}Hausa};
+    \node[align=center,text=Navy] at ([xshift=2.75cm,yshift=-1.40cm]current page.center)
+      {\large Gamsahamnida\\[-1pt]\scriptsize\color{Muted}Korean};
+    \node[align=center,text=Navy] at ([xshift=4.55cm,yshift=-1.40cm]current page.center)
+      {\large Spasibo\\[-1pt]\scriptsize\color{Muted}Russian};
+
+    \node[align=center,text=Navy] at ([xshift=-2.40cm,yshift=-2.48cm]current page.center)
+      {\normalsize Merci\;\textcolor{Coral}{--}\; Shukran\;\textcolor{Coral}{--}\; Arigato\\[-1pt]
+       \scriptsize\color{Muted}French \hspace{.75cm} Arabic \hspace{.75cm} Japanese};
+
+    \node[anchor=south east] at ([xshift=-.34cm,yshift=.34cm]current page.south east)
+      {\includegraphics[width=.66cm]{assets/cc-by-nc-sa-4.0.png}};
+    \node[anchor=south east,font=\tiny,text=Teal] at
+      ([xshift=-.34cm,yshift=2.48cm]current page.south east)
+      {\href{\ccLicenseURL}{License deed (PT-BR)}};
+  \end{tikzpicture}
 \end{frame}}
 
 \end{document}
