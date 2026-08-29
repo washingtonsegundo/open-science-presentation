@@ -6,12 +6,21 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
+\usepackage{fontspec}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usepackage{booktabs}
 \usepackage{ragged2e}
 \usepackage{hyperref}
+
+% Embedded open fonts ensure that non-Latin scripts compile identically in
+% Tectonic and Overleaf. See assets/fonts/OFL.txt for the font license.
+\newfontfamily\worldlatin[Path=assets/fonts/]{NotoSans.ttf}
+\newfontfamily\devanagarifont[Path=assets/fonts/]{NotoSansDevanagari.ttf}
+\newfontfamily\bengalifont[Path=assets/fonts/]{NotoSansBengali.ttf}
+\newfontfamily\tamilfont[Path=assets/fonts/]{NotoSansTamil.ttf}
+\newfontfamily\ethiopicfont[Path=assets/fonts/]{NotoSansEthiopic.ttf}
 
 \definecolor{Navy}{HTML}{092B4C}
 \definecolor{Teal}{HTML}{2B9C9A}
@@ -932,35 +941,32 @@
     \node[font=\small\bfseries,text=Teal]
       at ([yshift=.57cm]current page.center) {KNOWLEDGE GROWS WHEN IT IS SHARED};
 
-    \node[align=center,text=Navy] at ([xshift=-4.55cm,yshift=-.15cm]current page.center)
-      {\large Aguyjevete\\[-1pt]\scriptsize\color{Muted}Guarani};
-    \node[align=center,text=Navy] at ([xshift=-2.75cm,yshift=-.15cm]current page.center)
-      {\large Sulpayki\\[-1pt]\scriptsize\color{Muted}Quechua};
-    \node[align=center,text=Navy] at ([xshift=-.90cm,yshift=-.15cm]current page.center)
-      {\large Gracias\\[-1pt]\scriptsize\color{Muted}Spanish};
-    \node[align=center,text=Navy] at ([xshift=.90cm,yshift=-.15cm]current page.center)
-      {\large Obrigado\\[-1pt]\scriptsize\color{Muted}Portuguese};
-    \node[align=center,text=Navy] at ([xshift=2.75cm,yshift=-.15cm]current page.center)
-      {\large Dhanyavaad\\[-1pt]\scriptsize\color{Muted}Hindi};
-    \node[align=center,text=Navy] at ([xshift=4.55cm,yshift=-.15cm]current page.center)
-      {\large Xiexie\\[-1pt]\scriptsize\color{Muted}Chinese};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-4.20cm,yshift=-.05cm]current page.center)
+      {{\worldlatin\large Aguyjevete}\\[-1pt]\scriptsize\color{Muted}Guarani};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-1.40cm,yshift=-.05cm]current page.center)
+      {{\worldlatin\large Sulpayki}\\[-1pt]\scriptsize\color{Muted}Quechua};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=1.40cm,yshift=-.05cm]current page.center)
+      {{\worldlatin\large Asante}\\[-1pt]\scriptsize\color{Muted}Swahili / Bantu};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=4.20cm,yshift=-.05cm]current page.center)
+      {{\worldlatin\large Ngiyabonga}\\[-1pt]\scriptsize\color{Muted}Zulu / Bantu};
 
-    \node[align=center,text=Navy] at ([xshift=-4.55cm,yshift=-1.40cm]current page.center)
-      {\large Asante\\[-1pt]\scriptsize\color{Muted}Swahili / Bantu};
-    \node[align=center,text=Navy] at ([xshift=-2.75cm,yshift=-1.40cm]current page.center)
-      {\large Ngiyabonga\\[-1pt]\scriptsize\color{Muted}Zulu / Bantu};
-    \node[align=center,text=Navy] at ([xshift=-.90cm,yshift=-1.40cm]current page.center)
-      {\large E se\\[-1pt]\scriptsize\color{Muted}Yoruba};
-    \node[align=center,text=Navy] at ([xshift=.90cm,yshift=-1.40cm]current page.center)
-      {\large Nagode\\[-1pt]\scriptsize\color{Muted}Hausa};
-    \node[align=center,text=Navy] at ([xshift=2.75cm,yshift=-1.40cm]current page.center)
-      {\large Gamsahamnida\\[-1pt]\scriptsize\color{Muted}Korean};
-    \node[align=center,text=Navy] at ([xshift=4.55cm,yshift=-1.40cm]current page.center)
-      {\large Spasibo\\[-1pt]\scriptsize\color{Muted}Russian};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-4.20cm,yshift=-1.25cm]current page.center)
+      {{\worldlatin\large Ẹ ṣé}\\[-1pt]\scriptsize\color{Muted}Yoruba};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-1.40cm,yshift=-1.25cm]current page.center)
+      {{\worldlatin\large Na gode}\\[-1pt]\scriptsize\color{Muted}Hausa};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=1.40cm,yshift=-1.25cm]current page.center)
+      {{\devanagarifont\large धन्यवाद}\\[-1pt]\scriptsize\color{Muted}Hindi};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=4.20cm,yshift=-1.25cm]current page.center)
+      {{\bengalifont\large ধন্যবাদ}\\[-1pt]\scriptsize\color{Muted}Bengali};
 
-    \node[align=center,text=Navy] at ([xshift=-2.40cm,yshift=-2.48cm]current page.center)
-      {\normalsize Merci\;\textcolor{Coral}{--}\; Shukran\;\textcolor{Coral}{--}\; Arigato\\[-1pt]
-       \scriptsize\color{Muted}French \hspace{.75cm} Arabic \hspace{.75cm} Japanese};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-4.20cm,yshift=-2.45cm]current page.center)
+      {{\tamilfont\large நன்றி}\\[-1pt]\scriptsize\color{Muted}Tamil};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-1.40cm,yshift=-2.45cm]current page.center)
+      {{\ethiopicfont\large አመሰግናለሁ}\\[-1pt]\scriptsize\color{Muted}Amharic};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=1.40cm,yshift=-2.45cm]current page.center)
+      {{\worldlatin\large Terima kasih}\\[-1pt]\scriptsize\color{Muted}Indonesian};
+    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=4.20cm,yshift=-2.45cm]current page.center)
+      {{\worldlatin\large Thank you}\\[-1pt]\scriptsize\color{Muted}English};
 
     \node[anchor=south east] at ([xshift=-.34cm,yshift=.34cm]current page.south east)
       {\includegraphics[width=.66cm]{assets/cc-by-nc-sa-4.0.png}};
