@@ -32,4 +32,11 @@ the main document.
 The presentation, LaTeX source, and original visual materials are licensed
 under [CC BY-NC-SA 4.0](LICENSE.md), unless otherwise indicated.
 
+## Editable diagrams
+
+All presentation diagrams are written in TikZ directly in `main.tex`. Their
+labels, nodes, coordinates, and arrows can be edited without external image
+software. The reusable diagram definitions are grouped near the beginning of
+the file under `Editable monochrome diagrams`.
+
 Copyright © 2026 Washington L. de Carvalho Segundo.

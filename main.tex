@@ -58,6 +58,89 @@
   \small\textbf{#2}
   \end{minipage}}
 
+% ---------------------------------------------------------------------------
+% Editable monochrome diagrams
+% Change labels, positions, and connections directly in the TikZ code below.
+\tikzset{
+  diagram node/.style={draw=black,fill=white,rounded corners=2pt,align=center,
+    minimum height=.85cm,text width=2.1cm,font=\small},
+  diagram small/.style={draw=black,fill=white,rounded corners=2pt,align=center,
+    minimum height=.72cm,text width=1.75cm,font=\scriptsize},
+  diagram arrow/.style={->,>=stealth,thick,draw=black},
+  diagram line/.style={thick,draw=black}
+}
+
+\newcommand{\OpenScienceCycleDiagram}{%
+\begin{tikzpicture}
+  \node[diagram node] (plan) at (0,1.15) {Plan\\openly};
+  \node[diagram node] (create) at (3.2,1.15) {Create\\outputs};
+  \node[diagram node] (share) at (3.2,-1.15) {Share and\\publish};
+  \node[diagram node] (reuse) at (0,-1.15) {Reuse and\\evaluate};
+  \draw[diagram arrow] (plan) -- (create);
+  \draw[diagram arrow] (create) -- (share);
+  \draw[diagram arrow] (share) -- (reuse);
+  \draw[diagram arrow] (reuse) -- (plan);
+  \node[draw=black,circle,fill=white,align=center,font=\bfseries\small,
+    minimum size=1.20cm] at (1.6,0) {OPEN\\SCIENCE};
+\end{tikzpicture}}
+
+\newcommand{\KnowledgeValueChainDiagram}{%
+\begin{tikzpicture}[node distance=.55cm]
+  \node[diagram node] (objects) {Research\\objects};
+  \node[diagram node,right=of objects] (curation) {Curation and\\metadata};
+  \node[diagram node,right=of curation] (analysis) {Analysis and\\models};
+  \node[diagram node,right=of analysis] (ai) {Responsible\\AI};
+  \node[diagram node,right=of ai] (value) {Public\\value};
+  \draw[diagram arrow] (objects) -- (curation);
+  \draw[diagram arrow] (curation) -- (analysis);
+  \draw[diagram arrow] (analysis) -- (ai);
+  \draw[diagram arrow] (ai) -- (value);
+  \node[font=\scriptsize,below=.22cm of objects] {Data, publications, code};
+  \node[font=\scriptsize,below=.22cm of curation] {Context and provenance};
+  \node[font=\scriptsize,below=.22cm of analysis] {Patterns and evidence};
+  \node[font=\scriptsize,below=.22cm of ai] {Grounded automation};
+  \node[font=\scriptsize,below=.22cm of value] {Decisions and services};
+\end{tikzpicture}}
+
+\newcommand{\OpenInfrastructureDiagram}{%
+\begin{tikzpicture}[node distance=.52cm]
+  \node[diagram node] (repo) {Repositories};
+  \node[diagram node,right=of repo] (meta) {Metadata and\\identifiers};
+  \node[diagram node,right=of meta] (graph) {Knowledge\\graphs};
+  \node[diagram node,right=of graph] (ai) {Grounded AI\\and insight};
+  \draw[diagram arrow] (repo) -- node[above,font=\scriptsize]{expose} (meta);
+  \draw[diagram arrow] (meta) -- node[above,font=\scriptsize]{connect} (graph);
+  \draw[diagram arrow] (graph) -- node[above,font=\scriptsize]{retrieve} (ai);
+  \draw[diagram line,dashed] ([yshift=-.65cm]repo.south west) --
+    node[below,font=\scriptsize]{preservation, governance, standards, and public infrastructure}
+    ([yshift=-.65cm]ai.south east);
+\end{tikzpicture}}
+
+\newcommand{\BrazilEcosystemDiagram}{%
+\begin{tikzpicture}[node distance=.48cm and .55cm]
+  \node[draw=black,circle,fill=white,align=center,font=\bfseries\small,
+    minimum size=1.45cm] (core) {BRAZILIAN\\OPEN SCIENCE};
+  \node[diagram small,above=of core] (publish) {Open publishing\\SciELO / journals};
+  \node[diagram small,right=of core] (discover) {Discovery\\Oasisbr / BDTD};
+  \node[diagram small,below=of core] (preserve) {Preservation\\Cariniana};
+  \node[diagram small,left=of core] (integrate) {Integration\\BrCris};
+  \draw[diagram arrow] (core) -- (publish);
+  \draw[diagram arrow] (core) -- (discover);
+  \draw[diagram arrow] (core) -- (preserve);
+  \draw[diagram arrow] (core) -- (integrate);
+\end{tikzpicture}}
+
+\newcommand{\SustainableDevelopmentDiagram}{%
+\begin{tikzpicture}[node distance=.62cm]
+  \node[diagram node] (data) {Integrated\\data};
+  \node[diagram node,right=of data] (knowledge) {Accessible\\knowledge};
+  \node[diagram node,right=of knowledge] (innovation) {Evidence-based\\innovation};
+  \node[diagram node,right=of innovation] (benefit) {Sustainable\\public benefit};
+  \draw[diagram arrow] (data) -- (knowledge);
+  \draw[diagram arrow] (knowledge) -- (innovation);
+  \draw[diagram arrow] (innovation) -- (benefit);
+\end{tikzpicture}}
+
 \begin{document}
 
 % 1 --------------------------------------------------------------------------
@@ -88,7 +171,7 @@
 \begin{frame}{Open science redesigns the entire research cycle}
   \begin{columns}[T,onlytextwidth]
     \column{.52\textwidth}
-      \includegraphics[width=\linewidth]{assets/open-science-hero.png}
+      \begin{center}\resizebox{.90\linewidth}{!}{\OpenScienceCycleDiagram}\end{center}
     \column{.44\textwidth}
       \vspace{0.18cm}
       \tagline{A paradigm shift}
@@ -105,7 +188,7 @@
 
 % 3 --------------------------------------------------------------------------
 \begin{frame}{Information Science is the foundation of reliable AI}
-  \includegraphics[width=\linewidth,height=4.9cm,keepaspectratio]{assets/knowledge-value-chain.png}
+  \begin{center}\resizebox{.94\linewidth}{!}{\KnowledgeValueChainDiagram}\end{center}
   \vspace{-0.08cm}
 
   \begin{columns}[T,onlytextwidth]
@@ -254,13 +337,8 @@
 
 % 10 -------------------------------------------------------------------------
 \begin{frame}{Trustworthy AI begins with trustworthy research infrastructure}
-  \includegraphics[width=\linewidth,height=5.15cm,keepaspectratio]{assets/open-infrastructure.png}
-  \vspace{-0.12cm}
-
-  \begin{center}
-  \scriptsize\textbf{Repositories}\hspace{1.1cm}$\rightarrow$\hspace{1.1cm}\textbf{Rich metadata + identifiers}\hspace{1.1cm}$\rightarrow$\hspace{1.1cm}\textbf{Knowledge graphs}\hspace{1.1cm}$\rightarrow$\hspace{1.1cm}\textbf{Grounded insight}
-  \end{center}
-  \vspace{0.05cm}
+  \begin{center}\resizebox{.90\linewidth}{!}{\OpenInfrastructureDiagram}\end{center}
+  \vspace{0.18cm}
   \begin{center}\small\color{Muted}Preservation and interoperability turn stored objects into reusable evidence.\end{center}
 \end{frame}
 
@@ -388,7 +466,7 @@
 \begin{frame}{Brazil already has the foundations of a national ecosystem}
   \begin{columns}[T,onlytextwidth]
     \column{.58\textwidth}
-      \includegraphics[width=\linewidth]{assets/open-science-brazil.png}
+      \begin{center}\resizebox{.94\linewidth}{!}{\BrazilEcosystemDiagram}\end{center}
     \column{.38\textwidth}
       \vspace{0.05cm}
       \tagline{Strategic assets}
@@ -445,7 +523,7 @@
 
 % 17 -------------------------------------------------------------------------
 \begin{frame}{Scientific infrastructure enables sustainable development}
-  \includegraphics[width=\linewidth,height=4.95cm,keepaspectratio]{assets/science-to-sustainable-development.png}
+  \begin{center}\resizebox{.90\linewidth}{!}{\SustainableDevelopmentDiagram}\end{center}
   \vspace{-0.06cm}
 
   \begin{columns}[T,onlytextwidth]
