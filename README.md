@@ -40,7 +40,8 @@ software. The reusable diagram definitions are grouped near the beginning of
 the file under `Editable monochrome diagrams`.
 
 The multilingual closing slide uses embedded Noto fonts from `assets/fonts/`
-so that traditional scripts render consistently in local builds and Overleaf.
+so that Latin, Indic, Ethiopic, and Chinese scripts render consistently in
+local builds and Overleaf.
 Those fonts are distributed under the SIL Open Font License in
 `assets/fonts/OFL.txt`.
 
