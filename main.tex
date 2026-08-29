@@ -58,16 +58,29 @@
   \small\textbf{#2}
   \end{minipage}}
 
+\newcommand{\ccLicenseURL}{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt-br}
+
+% Subtle license watermark used on all content slides. The title and license
+% slides locally disable this background and display the complete mark instead.
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,opacity=.10] at
+      ([xshift=-.30cm,yshift=.43cm]current page.south east)
+      {\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}};
+  \end{tikzpicture}}
+
 % ---------------------------------------------------------------------------
 % Editable monochrome diagrams
 % Change labels, positions, and connections directly in the TikZ code below.
 \tikzset{
-  diagram node/.style={draw=black,fill=white,rounded corners=2pt,align=center,
-    minimum height=.85cm,text width=2.1cm,font=\small},
-  diagram small/.style={draw=black,fill=white,rounded corners=2pt,align=center,
-    minimum height=.72cm,text width=1.75cm,font=\scriptsize},
-  diagram arrow/.style={->,>=stealth,thick,draw=black},
-  diagram line/.style={thick,draw=black}
+  diagram node/.style={draw=Navy,very thick,fill=Mist,rounded corners=5pt,
+    align=center,minimum height=.88cm,text width=2.1cm,font=\small\bfseries,
+    text=Navy,inner sep=5pt},
+  diagram small/.style={draw=Navy,thick,fill=Mist,rounded corners=4pt,
+    align=center,minimum height=.74cm,text width=1.75cm,font=\scriptsize,
+    text=Navy,inner sep=4pt},
+  diagram arrow/.style={->,>=stealth,very thick,draw=Teal},
+  diagram line/.style={thick,draw=Coral}
 }
 
 \newcommand{\OpenScienceCycleDiagram}{%
@@ -80,8 +93,8 @@
   \draw[diagram arrow] (create) -- (share);
   \draw[diagram arrow] (share) -- (reuse);
   \draw[diagram arrow] (reuse) -- (plan);
-  \node[draw=black,circle,fill=white,align=center,font=\bfseries\small,
-    minimum size=1.20cm] at (1.6,0) {OPEN\\SCIENCE};
+  \node[draw=Teal,very thick,circle,fill=Teal,align=center,
+    font=\bfseries\small,text=white,minimum size=1.20cm] at (1.6,0) {OPEN\\SCIENCE};
 \end{tikzpicture}}
 
 \newcommand{\KnowledgeValueChainDiagram}{%
@@ -95,11 +108,11 @@
   \draw[diagram arrow] (curation) -- (analysis);
   \draw[diagram arrow] (analysis) -- (ai);
   \draw[diagram arrow] (ai) -- (value);
-  \node[font=\scriptsize,below=.22cm of objects] {Data, publications, code};
-  \node[font=\scriptsize,below=.22cm of curation] {Context and provenance};
-  \node[font=\scriptsize,below=.22cm of analysis] {Patterns and evidence};
-  \node[font=\scriptsize,below=.22cm of ai] {Grounded automation};
-  \node[font=\scriptsize,below=.22cm of value] {Decisions and services};
+  \node[font=\scriptsize,text=Muted,below=.22cm of objects] {Data, publications, code};
+  \node[font=\scriptsize,text=Muted,below=.22cm of curation] {Context and provenance};
+  \node[font=\scriptsize,text=Muted,below=.22cm of analysis] {Patterns and evidence};
+  \node[font=\scriptsize,text=Muted,below=.22cm of ai] {Grounded automation};
+  \node[font=\scriptsize,text=Muted,below=.22cm of value] {Decisions and services};
 \end{tikzpicture}}
 
 \newcommand{\OpenInfrastructureDiagram}{%
@@ -112,14 +125,14 @@
   \draw[diagram arrow] (meta) -- node[above,font=\scriptsize]{connect} (graph);
   \draw[diagram arrow] (graph) -- node[above,font=\scriptsize]{retrieve} (ai);
   \draw[diagram line,dashed] ([yshift=-.65cm]repo.south west) --
-    node[below,font=\scriptsize]{preservation, governance, standards, and public infrastructure}
+    node[below,font=\scriptsize,text=Muted]{preservation, governance, standards, and public infrastructure}
     ([yshift=-.65cm]ai.south east);
 \end{tikzpicture}}
 
 \newcommand{\BrazilEcosystemDiagram}{%
 \begin{tikzpicture}[node distance=.48cm and .55cm]
-  \node[draw=black,circle,fill=white,align=center,font=\bfseries\small,
-    minimum size=1.45cm] (core) {BRAZILIAN\\OPEN SCIENCE};
+  \node[draw=Teal,very thick,circle,fill=Teal,align=center,
+    font=\bfseries\small,text=white,minimum size=1.45cm] (core) {BRAZILIAN\\OPEN SCIENCE};
   \node[diagram small,above=of core] (publish) {Open publishing\\SciELO / journals};
   \node[diagram small,right=of core] (discover) {Discovery\\Oasisbr / BDTD};
   \node[diagram small,below=of core] (preserve) {Preservation\\Cariniana};
@@ -144,7 +157,7 @@
 \begin{document}
 
 % 1 --------------------------------------------------------------------------
-{\setbeamertemplate{footline}{}
+{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture,overlay]
     % Background image intentionally disabled.
@@ -152,6 +165,11 @@
     %   {\includegraphics[width=\paperwidth,height=\paperheight]{assets/open-science-hero.png}};
     \fill[Warm,opacity=.94] (current page.south west) rectangle ([xshift=7.25cm]current page.north west);
     \fill[Teal] (current page.south west) rectangle ([xshift=.16cm]current page.north west);
+    \node[anchor=south east] at ([xshift=-.34cm,yshift=.34cm]current page.south east)
+      {\includegraphics[width=.66cm]{assets/cc-by-nc-sa-4.0.png}};
+    \node[anchor=south east,font=\tiny,text=Teal] at
+      ([xshift=-.34cm,yshift=2.48cm]current page.south east)
+      {\href{\ccLicenseURL}{License deed (PT-BR)}};
   \end{tikzpicture}
   \vspace{0.65cm}
   \begin{minipage}{0.7\textwidth}
@@ -888,23 +906,27 @@
 \end{frame}
 
 % 31 -------------------------------------------------------------------------
+{\setbeamertemplate{background}{}
 \begin{frame}{License and reuse}
-  \begin{center}
-    \vspace{0.45cm}
-    {\fontsize{22}{26}\selectfont\bfseries\color{Navy}CC BY-NC-SA 4.0}\par
-    \vspace{0.35cm}
-    {\large Creative Commons Attribution--NonCommercial--ShareAlike 4.0 International}\par
-    \vspace{0.55cm}
-    \begin{minipage}{0.78\textwidth}
-      \centering\color{Ink}
-      You may share and adapt this presentation with appropriate attribution, for non-commercial purposes, provided that derivative works use the same license.
-    \end{minipage}
-    \vspace{0.55cm}
-
-    {\small\color{Muted}Author: Washington L. de Carvalho Segundo}\par
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east] at ([xshift=-.38cm,yshift=.43cm]current page.south east)
+      {\includegraphics[width=.78cm]{assets/cc-by-nc-sa-4.0.png}};
+    \node[anchor=south east,font=\scriptsize,text=Teal] at
+      ([xshift=-.38cm,yshift=2.98cm]current page.south east)
+      {\href{\ccLicenseURL}{License deed (PT-BR)}};
+  \end{tikzpicture}
+  \vspace{0.52cm}
+  \begin{minipage}{.72\textwidth}
+    {\Large\bfseries\color{Navy}Creative Commons}\par
     \vspace{0.12cm}
-    {\small\color{Teal}\href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{creativecommons.org/licenses/by-nc-sa/4.0}}
-  \end{center}
-\end{frame}
+    {\large\color{Ink}Attribution--NonCommercial--ShareAlike 4.0 International}\par
+    \vspace{0.48cm}
+
+    \color{Ink}You may share and adapt this presentation with appropriate attribution, for non-commercial purposes, provided that derivative works use the same license.
+    \vspace{0.45cm}
+
+    {\small\color{Muted}Author: Washington L. de Carvalho Segundo}
+  \end{minipage}
+\end{frame}}
 
 \end{document}
