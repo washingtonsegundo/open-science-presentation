@@ -1,4 +1,5 @@
 .cache/
+.gh-auth/
 .DS_Store
 build/*
 !build/.gitkeep
