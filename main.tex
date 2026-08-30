@@ -13,7 +13,6 @@
 \usepackage{booktabs}
 \usepackage{ragged2e}
 \usepackage{hyperref}
-\usepackage{qrcode}
 
 % Embedded open fonts ensure that non-Latin scripts compile identically in
 % Tectonic and Overleaf. See assets/fonts/OFL.txt for the font license.
@@ -72,10 +71,9 @@
 \newcommand{\ccLicenseURL}{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt-br}
 \newcommand{\serviceqr}[2]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=south east,align=center,fill=Warm,inner sep=2.5pt] at
-      ([xshift=-.62cm,yshift=.72cm]current page.south east)
-      {\href{#1}{\qrcode[height=.92cm]{#1}}\\[-2pt]
-       {\tiny\bfseries\color{Teal}#2}};
+    \node[anchor=south east,fill=Warm,inner sep=3pt] at
+      ([xshift=-.30cm,yshift=.72cm]current page.south east)
+      {\href{#1}{\includegraphics[height=1.45cm]{#2}}};
   \end{tikzpicture}}
 
 % Subtle license watermark used on all content slides. The title and license
@@ -411,6 +409,26 @@
   \end{columns}
 \end{frame}
 
+% 27 -------------------------------------------------------------------------
+\begin{frame}{Applied AI creates value when the information base is ready}
+  \small
+  \begin{tabular}{@{}p{2.35cm}p{3.15cm}p{5.9cm}@{}}
+    \toprule
+    \textbf{Application} & \textbf{AI capability} & \textbf{Public-interest value} \\
+    \midrule
+    ServicesPI & Semantic search + NLP & Natural-language discovery across complex patent collections \\
+    \addlinespace[0.12cm]
+    Patente.IA & Text + image similarity & Broader detection of related inventions and prior art \\
+    \addlinespace[0.12cm]
+    RDAPP & NLP + semantic retrieval & Structured access and analysis across public-policy documents \\
+    \addlinespace[0.12cm]
+    SAVITS & BI + ML + LLM & Monitoring, prediction, and explainable impact assessment \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \begin{center}\colorbox{Mist}{\parbox{.9\linewidth}{\centering\small The recurring architecture is simple: \textbf{infrastructure $\rightarrow$ structured data $\rightarrow$ AI application}.}}\end{center}
+\end{frame}
+
 % 12 -------------------------------------------------------------------------
 \begin{frame}{Openness must also deliver informational justice}
   \begin{columns}[T,onlytextwidth]
@@ -433,6 +451,29 @@
       \end{itemize}
   \end{columns}
 \end{frame}
+
+% 26 -------------------------------------------------------------------------
+\begin{frame}{Open infrastructures advance a focused set of SDGs}
+  \begin{columns}[T,onlytextwidth]
+    \column{.48\textwidth}
+      \keypoint{SDG 4 -- Quality Education}{Open scientific knowledge strengthens higher education, research, and information literacy.}
+      \vspace{0.22cm}
+
+      \keypoint{SDG 9 -- Innovation and Infrastructure}{Robust, interoperable digital systems provide the backbone for scientific innovation.}
+      \vspace{0.22cm}
+
+      \keypoint{SDG 10 -- Reduced Inequalities}{Open access reduces institutional, regional, and economic asymmetries in knowledge.}
+    \column{.48\textwidth}
+      \keypoint{SDG 16 -- Strong Institutions}{Transparent information systems support accountability, ethical governance, and evidence-based decisions.}
+      \vspace{0.22cm}
+
+      \keypoint{SDG 17 -- Partnerships}{Shared standards and interoperable networks enable national and international cooperation.}
+      \vspace{0.30cm}
+
+      \small\color{Muted}\textbf{Cross-cutting effect:} preservation and responsible reuse also support sustainable cities, institutions, and consumption of digital resources.
+  \end{columns}
+\end{frame}
+
 
 % 13 -------------------------------------------------------------------------
 \begin{frame}{Libraries are becoming critical knowledge infrastructure}
@@ -639,7 +680,7 @@
         \item Organizes fragmented records into a unified national model aligned with international standards.
         \item Provides free access for researchers, managers, funders, journalists, and citizens.
       \end{itemize}
-    \column{.36\textwidth}
+    \column{.26\textwidth}
       \vspace{0.28cm}
       \begin{center}
         {\fontsize{32}{36}\selectfont\bfseries\color{Teal}15.9M}
@@ -652,8 +693,9 @@
       \end{center}
       \vspace{0.25cm}
       \colorbox{Mist}{\parbox{.90\linewidth}{\centering\small A public gateway to understand who produces knowledge, where, with whom, and with what results.}}
+    \column{.10\textwidth}
   \end{columns}
-  \serviceqr{https://brcris.ibict.br/}{ACCESS BRCRIS}
+  \serviceqr{https://brcris.ibict.br/}{assets/qr-brcris.png}
 \end{frame}
 
 % 20 -------------------------------------------------------------------------
@@ -727,10 +769,9 @@
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center)
       {\href{https://brcris.ibict.br/}{\includegraphics[width=.995\paperwidth,trim=0 270 0 0,clip]{assets/screenshot-brcris.png}}};
-    \node[anchor=south east,align=center,fill=white,inner sep=3pt] at
+    \node[anchor=south east,fill=white,inner sep=3pt] at
       ([xshift=-.34cm,yshift=.34cm]current page.south east)
-      {\href{https://brcris.ibict.br/}{\qrcode[height=1.05cm]{https://brcris.ibict.br/}}\\[-2pt]
-       {\tiny\bfseries\color{Teal}ACCESS BRCRIS}};
+      {\includegraphics[height=1.70cm]{assets/qr-brcris.png}};
     \node[anchor=south west,opacity=.18] at ([xshift=.34cm,yshift=.34cm]current page.south west)
       {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
   \end{tikzpicture}
@@ -739,7 +780,7 @@
 % 22 -------------------------------------------------------------------------
 \begin{frame}{Oasisbr connects more than 6.5 million open digital objects}
   \begin{columns}[T,onlytextwidth]
-    \column{.48\textwidth}
+    \column{.38\textwidth}
       \vspace{0.04cm}
       \begin{center}
         \href{https://oasisbr.ibict.br/}{\includegraphics[height=.67\textheight]{assets/oasisbr-ecosystem.png}}
@@ -758,8 +799,9 @@
 
       {\Large\bfseries\color{Coral}\raisebox{0.05ex}{$\sim$}2,000}\par
       {\small\color{Muted}information sources --- repositories and scientific journals across Brazil}
+    \column{.10\textwidth}
   \end{columns}
-  \serviceqr{https://oasisbr.ibict.br/}{ACCESS OASISBR}
+  \serviceqr{https://oasisbr.ibict.br/}{assets/qr-oasisbr.png}
 \end{frame}
 
 % 23 -------------------------------------------------------------------------
@@ -774,7 +816,7 @@
         \item Also includes records of works defended by Brazilians at institutions abroad.
         \item Offers free national discovery; full texts remain hosted by participating institutions.
       \end{itemize}
-    \column{.38\textwidth}
+    \column{.28\textwidth}
       \tagline{Public value}
       \vspace{0.22cm}
       \begin{itemize}\setlength\itemsep{0.26cm}
@@ -784,13 +826,9 @@
         \item Access to specialized knowledge
         \item Accountability for public investment
       \end{itemize}
+    \column{.10\textwidth}
   \end{columns}
-  \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=south,align=center,fill=Warm,inner sep=2.5pt] at
-      ([yshift=.72cm]current page.south)
-      {\href{https://bdtd.ibict.br/}{\qrcode[height=.92cm]{https://bdtd.ibict.br/}}\\[-2pt]
-       {\tiny\bfseries\color{Teal}ACCESS BDTD}};
-  \end{tikzpicture}
+  \serviceqr{https://bdtd.ibict.br/}{assets/qr-bdtd.png}
 \end{frame}
 
 % 24 -------------------------------------------------------------------------
@@ -814,27 +852,29 @@
 
 % 25 -------------------------------------------------------------------------
 \begin{frame}{dARK turns persistence into regional sovereignty}
+  \small
   \begin{columns}[T,onlytextwidth]
     \column{.51\textwidth}
       \tagline{What it adds to ARK}
       \vspace{0.24cm}
-      \begin{itemize}\setlength\itemsep{0.30cm}
+      \begin{itemize}\setlength\itemsep{0.18cm}
         \item \textbf{Decentralization:} participating institutions share operational responsibility.
         \item \textbf{Traceability:} identifier events remain auditable over time.
         \item \textbf{Resilience:} distributed governance reduces single points of failure.
         \item \textbf{Sovereignty:} regional institutions define policies and priorities.
       \end{itemize}
-    \column{.45\textwidth}
+    \column{.39\textwidth}
       \tagline{How it works with Oasisbr}
       \vspace{0.24cm}
-      \begin{enumerate}\setlength\itemsep{0.30cm}
+      \begin{enumerate}\setlength\itemsep{0.18cm}
         \item Repositories expose qualified metadata through open protocols.
         \item Oasisbr aggregates and validates the records.
         \item dARK assigns persistent identifiers to eligible objects.
         \item Users discover content centrally while access remains with the source institution.
       \end{enumerate}
+    \column{.06\textwidth}
   \end{columns}
-  \serviceqr{https://www.dark-pid.net/}{ACCESS dARK}
+  \serviceqr{https://www.dark-pid.net/}{assets/qr-dark.png}
 \end{frame}
 
 % dARK service interface -----------------------------------------------------
@@ -843,56 +883,16 @@
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center)
       {\href{https://www.dark-pid.net/}{\includegraphics[width=.995\paperwidth,trim=0 270 0 0,clip]{assets/screenshot-dark.png}}};
-    \node[anchor=south east,align=center,fill=white,inner sep=3pt] at
+    \node[anchor=south east,fill=white,inner sep=3pt] at
       ([xshift=-.34cm,yshift=.34cm]current page.south east)
-      {\href{https://www.dark-pid.net/}{\qrcode[height=1.05cm]{https://www.dark-pid.net/}}\\[-2pt]
-       {\tiny\bfseries\color{Teal}ACCESS dARK}};
+      {\includegraphics[height=1.70cm]{assets/qr-dark.png}};
     \node[anchor=south west,opacity=.18] at ([xshift=.34cm,yshift=.34cm]current page.south west)
       {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
   \end{tikzpicture}
 \end{frame}}
 
-% 26 -------------------------------------------------------------------------
-\begin{frame}{Open infrastructures advance a focused set of SDGs}
-  \begin{columns}[T,onlytextwidth]
-    \column{.48\textwidth}
-      \keypoint{SDG 4 -- Quality Education}{Open scientific knowledge strengthens higher education, research, and information literacy.}
-      \vspace{0.22cm}
 
-      \keypoint{SDG 9 -- Innovation and Infrastructure}{Robust, interoperable digital systems provide the backbone for scientific innovation.}
-      \vspace{0.22cm}
 
-      \keypoint{SDG 10 -- Reduced Inequalities}{Open access reduces institutional, regional, and economic asymmetries in knowledge.}
-    \column{.48\textwidth}
-      \keypoint{SDG 16 -- Strong Institutions}{Transparent information systems support accountability, ethical governance, and evidence-based decisions.}
-      \vspace{0.22cm}
-
-      \keypoint{SDG 17 -- Partnerships}{Shared standards and interoperable networks enable national and international cooperation.}
-      \vspace{0.30cm}
-
-      \small\color{Muted}\textbf{Cross-cutting effect:} preservation and responsible reuse also support sustainable cities, institutions, and consumption of digital resources.
-  \end{columns}
-\end{frame}
-
-% 27 -------------------------------------------------------------------------
-\begin{frame}{Applied AI creates value when the information base is ready}
-  \small
-  \begin{tabular}{@{}p{2.35cm}p{3.15cm}p{5.9cm}@{}}
-    \toprule
-    \textbf{Application} & \textbf{AI capability} & \textbf{Public-interest value} \\
-    \midrule
-    ServicesPI & Semantic search + NLP & Natural-language discovery across complex patent collections \\
-    \addlinespace[0.12cm]
-    Patente.IA & Text + image similarity & Broader detection of related inventions and prior art \\
-    \addlinespace[0.12cm]
-    RDAPP & NLP + semantic retrieval & Structured access and analysis across public-policy documents \\
-    \addlinespace[0.12cm]
-    SAVITS & BI + ML + LLM & Monitoring, prediction, and explainable impact assessment \\
-    \bottomrule
-  \end{tabular}
-  \vfill
-  \begin{center}\colorbox{Mist}{\parbox{.9\linewidth}{\centering\small The recurring architecture is simple: \textbf{infrastructure $\rightarrow$ structured data $\rightarrow$ AI application}.}}\end{center}
-\end{frame}
 
 % 28 -------------------------------------------------------------------------
 \begin{frame}{Brazil needs a national implementation plan}
@@ -902,7 +902,7 @@
       \vspace{0.20cm}
       \begin{itemize}\setlength\itemsep{0.28cm}
         \item A national policy with clear public-interest goals
-        \item Defined roles for MCTI, funders, institutions, and scientific societies
+        \item Defined roles for funders, institutions, and scientific societies
         \item Shared standards with room for regional and disciplinary adaptation
         \item Stable funding for open infrastructures and professional teams
       \end{itemize}
@@ -966,11 +966,11 @@
     \normalsize\color{Muted}Together, they make research more reliable, reusable, inclusive, and aligned with the public interest.
   \end{center}
   \vfill
-  \begin{center}\scriptsize\color{Muted}Condensed and translated from the supplied materials and official Ibict service websites, covering Open Science, AI and data, Brazilian scientific information infrastructures, BrCris, Oasisbr, BDTD, the SDGs, national actions, and implementation pathways. Key frameworks referenced: UNESCO Open Science Recommendation, FAIR, CARE, TRUST, DEIA, DORA, Leiden Manifesto, and CoARA.\end{center}
+ % \begin{center}\scriptsize\color{Muted}Condensed and translated from the supplied materials and official Ibict service websites, covering Open Science, AI and data, Brazilian scientific information infrastructures, BrCris, Oasisbr, BDTD, the SDGs, national actions, and implementation pathways. Key frameworks referenced: UNESCO Open Science Recommendation, FAIR, CARE, TRUST, DEIA, DORA, Leiden Manifesto, and CoARA.\end{center}
 \end{frame}
 
 % 31 -------------------------------------------------------------------------
-\begin{frame}{Salvador connects repository communities in 2027}
+\begin{frame}{Salvador/Brazil connects repository communities in 2027}
   \vspace{-0.08cm}
   \begin{center}
     \href{https://or2027.openrepositories.org/}{\includegraphics[width=.50\textwidth]{assets/openrepositories-logo.jpg}}
@@ -1014,20 +1014,20 @@
 \end{frame}
 
 % 32 -------------------------------------------------------------------------
-\begin{frame}{License and reuse}
-  \vspace{0.52cm}
-  \begin{minipage}{.82\textwidth}
-    {\Large\bfseries\color{Navy}Creative Commons}\par
-    \vspace{0.12cm}
-    {\large\color{Ink}Attribution--Non Commercial--Share Alike 4.0 International}\par
-    \vspace{0.48cm}
+%\begin{frame}{License and reuse}
+%  \vspace{0.52cm}
+%  \begin{minipage}{.82\textwidth}
+%    {\Large\bfseries\color{Navy}Creative Commons}\par
+%    \vspace{0.12cm}
+%    {\large\color{Ink}Attribution--Non Commercial--Share Alike 4.0 International}\par
+%    \vspace{0.48cm}
 
-    \color{Ink}You may share and adapt this presentation with appropriate attribution, for non-commercial purposes, provided that derivative works use the same license.
-    \vspace{0.45cm}
+%    \color{Ink}You may share and adapt this presentation with appropriate attribution, for non-commercial purposes, provided that derivative works use the same license.
+%    \vspace{0.45cm}
 
-    {\small\color{Muted}Author: Washington L. de Carvalho Segundo}
-  \end{minipage}
-\end{frame}
+%    {\small\color{Muted}Author: Washington L. de Carvalho Segundo}
+%  \end{minipage}
+%\end{frame}
 
 % 33 -------------------------------------------------------------------------
 {\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
