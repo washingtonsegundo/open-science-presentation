@@ -663,9 +663,13 @@
 % Project Laguna architecture ------------------------------------------------
 {\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
 \begin{frame}[plain]
-  \begin{center}
-    \includegraphics[height=.96\paperheight]{assets/laguna-architecture.pdf}
-  \end{center}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center)
+      {\includegraphics[height=.96\paperheight]{assets/laguna-architecture.pdf}};
+    \node[anchor=south east,fill=white,inner sep=3pt] at
+      ([xshift=-.34cm,yshift=.34cm]current page.south east)
+      {\href{https://doi.org/10.21680/2447-7842.2023v9n2ID33825}{\includegraphics[height=1.55cm]{assets/qr-doi-laguna.png}}};
+  \end{tikzpicture}
 \end{frame}}
 
 % 19 -------------------------------------------------------------------------
@@ -680,7 +684,7 @@
         \item Organizes fragmented records into a unified national model aligned with international standards.
         \item Provides free access for researchers, managers, funders, journalists, and citizens.
       \end{itemize}
-    \column{.26\textwidth}
+    \column{.36\textwidth}
       \vspace{0.28cm}
       \begin{center}
         {\fontsize{32}{36}\selectfont\bfseries\color{Teal}15.9M}
@@ -693,9 +697,7 @@
       \end{center}
       \vspace{0.25cm}
       \colorbox{Mist}{\parbox{.90\linewidth}{\centering\small A public gateway to understand who produces knowledge, where, with whom, and with what results.}}
-    \column{.10\textwidth}
   \end{columns}
-  \serviceqr{https://brcris.ibict.br/}{assets/qr-brcris.png}
 \end{frame}
 
 % 20 -------------------------------------------------------------------------
@@ -780,12 +782,12 @@
 % 22 -------------------------------------------------------------------------
 \begin{frame}{Oasisbr connects more than 6.5 million open digital objects}
   \begin{columns}[T,onlytextwidth]
-    \column{.38\textwidth}
+    \column{.43\textwidth}
       \vspace{0.04cm}
       \begin{center}
         \href{https://oasisbr.ibict.br/}{\includegraphics[height=.67\textheight]{assets/oasisbr-ecosystem.png}}
       \end{center}
-    \column{.48\textwidth}
+    \column{.43\textwidth}
       \tagline{A national and international gateway}
       \vspace{0.16cm}
 
@@ -863,7 +865,7 @@
         \item \textbf{Resilience:} distributed governance reduces single points of failure.
         \item \textbf{Sovereignty:} regional institutions define policies and priorities.
       \end{itemize}
-    \column{.39\textwidth}
+    \column{.45\textwidth}
       \tagline{How it works with Oasisbr}
       \vspace{0.24cm}
       \begin{enumerate}\setlength\itemsep{0.18cm}
@@ -872,9 +874,7 @@
         \item dARK assigns persistent identifiers to eligible objects.
         \item Users discover content centrally while access remains with the source institution.
       \end{enumerate}
-    \column{.06\textwidth}
   \end{columns}
-  \serviceqr{https://www.dark-pid.net/}{assets/qr-dark.png}
 \end{frame}
 
 % dARK service interface -----------------------------------------------------
