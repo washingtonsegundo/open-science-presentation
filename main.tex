@@ -134,14 +134,14 @@
 \end{tikzpicture}}
 
 \newcommand{\OpenInfrastructureDiagram}{%
-\begin{tikzpicture}[node distance=.52cm]
+\begin{tikzpicture}[node distance=1.18cm]
   \node[diagram node] (repo) {Repositories};
   \node[diagram node,right=of repo] (meta) {Metadata and\\identifiers};
   \node[diagram node,right=of meta] (graph) {Knowledge\\graphs};
   \node[diagram node,right=of graph] (ai) {Grounded AI\\and insight};
-  \draw[diagram arrow] (repo) -- node[above,font=\scriptsize]{expose} (meta);
-  \draw[diagram arrow] (meta) -- node[above,font=\scriptsize]{connect} (graph);
-  \draw[diagram arrow] (graph) -- node[above,font=\scriptsize]{retrieve} (ai);
+  \draw[diagram arrow] (repo) -- node[midway,above=3pt,font=\scriptsize,fill=Warm,inner sep=1pt]{expose} (meta);
+  \draw[diagram arrow] (meta) -- node[midway,above=3pt,font=\scriptsize,fill=Warm,inner sep=1pt]{connect} (graph);
+  \draw[diagram arrow] (graph) -- node[midway,above=3pt,font=\scriptsize,fill=Warm,inner sep=1pt]{retrieve} (ai);
   \draw[diagram line,dashed] ([yshift=-.65cm]repo.south west) --
     node[below,font=\scriptsize,text=Muted]{preservation, governance, standards, and public infrastructure}
     ([yshift=-.65cm]ai.south east);
@@ -1036,7 +1036,7 @@
 
 
     \node[font=\fontsize{30}{34}\selectfont\bfseries,text=Navy]
-      at ([yshift=1.38cm]current page.center) {Obrigado!};
+      at ([yshift=1.38cm]current page.center) {Thank you!};
     \node[font=\small\bfseries,text=Teal]
       at ([yshift=.55cm]current page.center) {washingtonsegundo@ibict.br};
 
@@ -1067,7 +1067,7 @@
     \node[align=center,text width=2.20cm,text=Navy] at ([xshift=2.40cm,yshift=-2.45cm]current page.center)
       {{\chinesefont\large 谢谢}\\[-1pt]\scriptsize\color{Muted}Chinese};
     \node[align=center,text width=2.20cm,text=Navy] at ([xshift=4.80cm,yshift=-2.45cm]current page.center)
-      {{\worldlatin\large Thank you}\\[-1pt]\scriptsize\color{Muted}English};
+      {{\worldlatin\large Obrigado}\\[-1pt]\scriptsize\color{Muted}Portuguese};
 
     \node[anchor=south east] at ([xshift=-.34cm,yshift=.34cm]current page.south east)
       {\href{\ccLicenseURL}{\includegraphics[width=.66cm]{assets/cc-by-nc-sa-4.0.png}}};
