@@ -47,5 +47,3 @@ so that Latin, Indic, Ethiopic, and Chinese scripts render consistently in
 local builds and Overleaf.
 Those fonts are distributed under the SIL Open Font License in
 `assets/fonts/OFL.txt`.
-
-Copyright © 2026 Washington L. de Carvalho Segundo.
