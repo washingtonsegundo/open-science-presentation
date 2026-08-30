@@ -13,6 +13,7 @@
 \usepackage{booktabs}
 \usepackage{ragged2e}
 \usepackage{hyperref}
+\usepackage{qrcode}
 
 % Embedded open fonts ensure that non-Latin scripts compile identically in
 % Tectonic and Overleaf. See assets/fonts/OFL.txt for the font license.
@@ -51,7 +52,7 @@
 \setbeamertemplate{footline}{%
   \leavevmode\hbox{%
   \begin{beamercolorbox}[wd=.88\paperwidth,ht=2.5ex,dp=1.1ex,leftskip=.65cm]{normal text}%
-    \scriptsize\color{Muted}OPEN SCIENCE \hspace{0.5em}\textcolor{Cyan}{|}\hspace{0.5em} A PUBLIC-INTEREST RESEARCH ECOSYSTEM
+    \scriptsize\color{Muted}High-Level Conference on International Open Science Cooperation, Shanghai, 11 September 2026
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.5ex,dp=1.1ex,center]{normal text}%
     \scriptsize\color{Muted}\insertframenumber
@@ -69,6 +70,13 @@
   \end{minipage}}
 
 \newcommand{\ccLicenseURL}{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt-br}
+\newcommand{\serviceqr}[2]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,align=center,fill=Warm,inner sep=2.5pt] at
+      ([xshift=-.62cm,yshift=.72cm]current page.south east)
+      {\href{#1}{\qrcode[height=.92cm]{#1}}\\[-2pt]
+       {\tiny\bfseries\color{Teal}#2}};
+  \end{tikzpicture}}
 
 % Subtle license watermark used on all content slides. The title and license
 % slides locally disable this background and display the complete mark instead.
@@ -259,7 +267,7 @@
 \end{frame}
 
 % 5 --------------------------------------------------------------------------
-\begin{frame}{Ibict has shaped scientific information since 1954}
+\begin{frame}{Ibict has shaped scientific information}
   \begin{columns}[T,onlytextwidth]
     \column{.30\textwidth}
       \vspace{0.10cm}
@@ -610,6 +618,14 @@
   \end{columns}
 \end{frame}
 
+% Project Laguna architecture ------------------------------------------------
+{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+\begin{frame}[plain]
+  \begin{center}
+    \includegraphics[height=.96\paperheight]{assets/laguna-architecture.pdf}
+  \end{center}
+\end{frame}}
+
 % 19 -------------------------------------------------------------------------
 \begin{frame}{BrCris creates a national view of Brazilian research}
   \begin{columns}[T,onlytextwidth]
@@ -636,8 +652,7 @@
       \vspace{0.25cm}
       \colorbox{Mist}{\parbox{.90\linewidth}{\centering\small A public gateway to understand who produces knowledge, where, with whom, and with what results.}}
   \end{columns}
-  \vfill
-  {\tiny\color{Muted}Source: \href{https://brcris.ibict.br/en}{brcris.ibict.br} and \href{https://brcris.ibict.br/en/about}{official BrCris About page}, accessed 28 Aug. 2026.}
+  \serviceqr{https://brcris.ibict.br/}{ACCESS BRCRIS}
 \end{frame}
 
 % 20 -------------------------------------------------------------------------
@@ -705,32 +720,45 @@
   {\tiny\color{Muted}Source: \href{https://brcris.ibict.br/en/about}{official BrCris About page}, \href{https://brcris.ibict.br/en/dashboards}{Dashboards}, and \href{https://brcris.ibict.br/en/faq}{FAQ}, accessed 28 Aug. 2026.}
 \end{frame}
 
+% BrCris service interface ---------------------------------------------------
+{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center)
+      {\href{https://brcris.ibict.br/}{\includegraphics[width=.995\paperwidth,trim=0 270 0 0,clip]{assets/screenshot-brcris.png}}};
+    \node[anchor=south east,align=center,fill=white,inner sep=3pt] at
+      ([xshift=-.34cm,yshift=.34cm]current page.south east)
+      {\href{https://brcris.ibict.br/}{\qrcode[height=1.05cm]{https://brcris.ibict.br/}}\\[-2pt]
+       {\tiny\bfseries\color{Teal}ACCESS BRCRIS}};
+    \node[anchor=south west,opacity=.18] at ([xshift=.34cm,yshift=.34cm]current page.south west)
+      {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
+  \end{tikzpicture}
+\end{frame}}
+
 % 22 -------------------------------------------------------------------------
-\begin{frame}{Oasisbr is Brazil's open research gateway}
+\begin{frame}{Oasisbr connects more than 6.5 million open digital objects}
   \begin{columns}[T,onlytextwidth]
-    \column{.57\textwidth}
-      \tagline{One search across open sources}
+    \column{.48\textwidth}
+      \vspace{0.04cm}
+      \begin{center}
+        \href{https://oasisbr.ibict.br/}{\includegraphics[height=.67\textheight]{assets/oasisbr-ecosystem.png}}
+      \end{center}
+    \column{.48\textwidth}
+      \tagline{A national and international gateway}
+      \vspace{0.16cm}
+
+      {\fontsize{28}{31}\selectfont\bfseries\color{Navy}6.5M+}\par
+      {\small\color{Muted}articles, theses, dissertations, books, book chapters, and research datasets}
       \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.28cm}
-        \item A multidisciplinary discovery service developed by Ibict.
-        \item Aggregates open content from journals, publication repositories, research data repositories, and digital libraries.
-        \item Provides free access through one interface while directing users to the full object at the source institution.
-        \item Exchanges content with Portuguese infrastructure through RCAAP.
-      \end{itemize}
-    \column{.39\textwidth}
-      \tagline{Content types}
+
+      {\Large\bfseries\color{Teal}\raisebox{0.05ex}{$\sim$}1.2M}\par
+      {\small\color{Muted}documents aggregated through BDTD}
       \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.20cm}
-        \item Journal articles and preprints
-        \item Books and book chapters
-        \item Conference papers
-        \item Research datasets
-        \item Theses and dissertations
-        \item Undergraduate works and reports
-      \end{itemize}
+
+      {\Large\bfseries\color{Coral}\raisebox{0.05ex}{$\sim$}2,000}\par
+      {\small\color{Muted}information sources --- repositories and scientific journals across Brazil}
   \end{columns}
-  \vfill
-  {\tiny\color{Muted}Source: \href{https://oasisbr.ibict.br/}{Oasisbr official portal}, \href{https://www.oasisbr.ibict.br/vufind/about/home}{About}, and \href{https://oasisbr.ibict.br/vufind/faq/home}{FAQ}, accessed 28 Aug. 2026.}
+  \serviceqr{https://oasisbr.ibict.br/}{ACCESS OASISBR}
 \end{frame}
 
 % 23 -------------------------------------------------------------------------
@@ -753,11 +781,15 @@
         \item Shared metadata standards
         \item Institutional interoperability
         \item Access to specialized knowledge
-        \item Governance of public investment in graduate education
+        \item Accountability for public investment
       \end{itemize}
   \end{columns}
-  \vfill
-  {\tiny\color{Muted}Source: \href{https://bdtd.ibict.br/vufind/about/home}{BDTD official About page}, \href{https://bdtd.ibict.br/vufind/faq/home}{FAQ}, and \href{https://www.bdtd.ibict.br/vufind/Search/Advanced}{portal}, accessed 28 Aug. 2026.}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south,align=center,fill=Warm,inner sep=2.5pt] at
+      ([yshift=.72cm]current page.south)
+      {\href{https://bdtd.ibict.br/}{\qrcode[height=.92cm]{https://bdtd.ibict.br/}}\\[-2pt]
+       {\tiny\bfseries\color{Teal}ACCESS BDTD}};
+  \end{tikzpicture}
 \end{frame}
 
 % 24 -------------------------------------------------------------------------
@@ -801,7 +833,23 @@
         \item Users discover content centrally while access remains with the source institution.
       \end{enumerate}
   \end{columns}
+  \serviceqr{https://www.dark-pid.net/}{ACCESS dARK}
 \end{frame}
+
+% dARK service interface -----------------------------------------------------
+{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center)
+      {\href{https://www.dark-pid.net/}{\includegraphics[width=.995\paperwidth,trim=0 270 0 0,clip]{assets/screenshot-dark.png}}};
+    \node[anchor=south east,align=center,fill=white,inner sep=3pt] at
+      ([xshift=-.34cm,yshift=.34cm]current page.south east)
+      {\href{https://www.dark-pid.net/}{\qrcode[height=1.05cm]{https://www.dark-pid.net/}}\\[-2pt]
+       {\tiny\bfseries\color{Teal}ACCESS dARK}};
+    \node[anchor=south west,opacity=.18] at ([xshift=.34cm,yshift=.34cm]current page.south west)
+      {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
+  \end{tikzpicture}
+\end{frame}}
 
 % 26 -------------------------------------------------------------------------
 \begin{frame}{Open infrastructures advance a focused set of SDGs}
@@ -939,7 +987,7 @@
     \node[above=3pt,font=\small\bfseries,text=Navy] at (3.92,.43) {OPEN REPOSITORIES 2027};
     \draw[line width=7pt,Teal,line cap=round] (7.84,-.75) -- (9.8,-.75);
     \node[below=3pt,align=center,font=\scriptsize\bfseries,text=Teal] at (8.82,-.75)
-      {V ENCONTRO DA REDE BRASILEIRA\\DE REPOSITÓRIOS DIGITAIS};
+      {5TH BRAZILIAN DIGITAL REPOSITORIES\\NETWORK MEETING};
   \end{tikzpicture}
   \end{center}
 
