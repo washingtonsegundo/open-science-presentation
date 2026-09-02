@@ -569,6 +569,45 @@
 \end{frame}
 
 % 16 -------------------------------------------------------------------------
+% Sources: https://rbrd.ibict.br/ ; https://www.reprodutibilidade.org/ ;
+% https://www.lareferencia.info/ ; https://coar-repositories.org/
+\begin{frame}{Networks connect national capacity with global cooperation}
+  \begin{center}
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    % Connections are drawn first so they remain behind the network nodes.
+    \draw[diagram arrow] (-1.35,0.55) -- (-3.15,1.55);
+    \draw[diagram arrow] (-1.35,-0.55) -- (-3.15,-1.55);
+    \draw[diagram arrow] (1.35,0.55) -- (3.15,1.55);
+    \draw[diagram arrow] (1.35,-0.55) -- (3.15,-1.55);
+
+    \node[draw=Teal,very thick,circle,fill=Teal,text=white,align=center,
+      minimum size=2.35cm,font=\bfseries\small] at (0,0)
+      {NETWORKED\\COOPERATION};
+
+    \node[diagram node,text width=4.15cm,minimum height=1.52cm] at (-4.25,1.75)
+      {\href{https://rbrd.ibict.br/}{\textbf{Brazilian Digital\\Repositories Network}}\\[-1pt]
+       {\scriptsize\color{Muted}A national community for training and shared repository practice}};
+
+    \node[diagram node,text width=4.15cm,minimum height=1.52cm] at (-4.25,-1.75)
+      {\href{https://www.reprodutibilidade.org/}{\textbf{Brazilian\\Reproducibility Network}}\\[-1pt]
+       {\scriptsize\color{Muted}A community advancing open and reproducible research}};
+
+    \node[diagram node,text width=4.15cm,minimum height=1.52cm] at (4.25,1.75)
+      {\href{https://www.lareferencia.info/}{\textbf{LA Referencia}}\\[-1pt]
+       {\scriptsize\color{Muted}Open access and interoperability among national nodes in Latin America and Spain}};
+
+    \node[diagram node,text width=4.15cm,minimum height=1.52cm] at (4.25,-1.75)
+      {\href{https://coar-repositories.org/}{\textbf{COAR}}\\[-1pt]
+       {\scriptsize\color{Muted}Global cooperation on repository policy, practice, and innovation}};
+  \end{tikzpicture}
+  \end{center}
+  \vspace{-0.10cm}
+  \begin{center}
+    \small\color{Muted}Networks turn local experience into shared standards, learning, and collective action.
+  \end{center}
+\end{frame}
+
+% 17 -------------------------------------------------------------------------
 \begin{frame}{Ibict connects the national ecosystem in layers}
   \small
   \begin{columns}[T,onlytextwidth]
