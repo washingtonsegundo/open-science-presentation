@@ -52,7 +52,7 @@
 \setbeamertemplate{footline}{%
   \leavevmode\hbox{%
   \begin{beamercolorbox}[wd=.88\paperwidth,ht=2.5ex,dp=1.1ex,leftskip=.65cm]{normal text}%
-    \scriptsize\color{Muted}Conferência de Alto Nível sobre Cooperação Internacional em Ciência Aberta, Xangai, 11 de setembro de 2026
+    \scriptsize\color{Muted}
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.5ex,dp=1.1ex,center]{normal text}%
     \scriptsize\color{Muted}\insertframenumber
@@ -102,9 +102,9 @@
 
 \newcommand{\OpenScienceCycleDiagram}{%
 \begin{tikzpicture}
-  \node[diagram node] (plan) at (0,1.15) {Planejar\\abertamente};
+  \node[diagram node] (plan) at (0,1.15) {Planejar};
   \node[diagram node] (create) at (3.2,1.15) {Criar\\resultados};
-  \node[diagram node] (share) at (3.2,-1.15) {Compartilhar e\\publicar};
+  \node[diagram node] (share) at (3.2,-1.15) {Compartilhar};
   \node[diagram node] (reuse) at (0,-1.15) {Reutilizar e\\avaliar};
   \draw[diagram arrow] (plan) -- (create);
   \draw[diagram arrow] (create) -- (share);
@@ -135,13 +135,13 @@
 \newcommand{\OpenInfraestruturaDiagram}{%
 \begin{tikzpicture}[node distance=1.18cm]
   \node[diagram node] (repo) {Repositórios};
-  \node[diagram node,right=of repo] (meta) {Metadados e\\identificadores};
+  \node[diagram node,right=of repo] (meta) {\footnotesize Metadados e\\identificadores};
   \node[diagram node,right=of meta] (graph) {Grafos de\\conhecimento};
-  \node[diagram node,right=of graph] (ai) {IA fundamentada\\e inteligência};
+  \node[diagram node,right=of graph] (ai) {\footnotesize IA fundamentada\\e inteligência};
   \draw[diagram arrow] (repo) -- node[midway,above=3pt,font=\scriptsize,fill=Warm,inner sep=1pt]{expor} (meta);
   \draw[diagram arrow] (meta) -- node[midway,above=3pt,font=\scriptsize,fill=Warm,inner sep=1pt]{conectar} (graph);
   \draw[diagram arrow] (graph) -- node[midway,above=3pt,font=\scriptsize,fill=Warm,inner sep=1pt]{recuperar} (ai);
-  \draw[diagram line,dashed] ([yshift=-.65cm]repo.south west) --
+  %\draw[diagram line,dashed] ([yshift=-.65cm]repo.south west) --
     node[below,font=\scriptsize,text=Muted]{preservação, governança, padrões e infraestrutura pública}
     ([yshift=-.65cm]ai.south east);
 \end{tikzpicture}}
@@ -162,10 +162,10 @@
 
 \newcommand{\SustainableDevelopmentDiagram}{%
 \begin{tikzpicture}[node distance=.62cm]
-  \node[diagram node] (data) {Dados\\integrados};
-  \node[diagram node,right=of data] (knowledge) {Conhecimento\\acessível};
-  \node[diagram node,right=of knowledge] (innovation) {Inovação baseada\\em evidências};
-  \node[diagram node,right=of innovation] (benefit) {Benefício público\\sustentável};
+  \node[diagram node] (data) {\footnotesize Dados};
+  \node[diagram node,right=of data] (knowledge) {\footnotesize Conhecimento};
+  \node[diagram node,right=of knowledge] (innovation) {\footnotesize Inovação};
+  \node[diagram node,right=of innovation] (benefit) {\footnotesize Benefício};
   \draw[diagram arrow] (data) -- (knowledge);
   \draw[diagram arrow] (knowledge) -- (innovation);
   \draw[diagram arrow] (innovation) -- (benefit);
@@ -190,15 +190,15 @@
   \end{tikzpicture}
   \vspace{0.65cm}
   \begin{minipage}{0.7\textwidth}
-    \tagline{Aberta desde a concepção}
-    \vspace{0.25cm}
+    \tagline{Aberta desde a concepção\\[0.2cm]}
+    \vspace{0.2cm}
     {\fontsize{24}{27}\selectfont\bfseries\color{Navy}Ciência Aberta}
     \vspace{0.2cm}
 
     {\usebeamerfont{subtitle}\color{Ink}CI, CD, IA e DS}
     \vspace{0.42cm}
 
-    \small\color{Muted}Uma visão concisa dos princípios, das infraestruturas, da responsabilidade social e da agenda estratégica brasileira.
+    \small\color{Muted}Uma visão concisa dos princípios, das infraestruturas, \\da responsabilidade social e da agenda estratégica brasileira.
     \vspace{0.48cm}
 
     {\normalsize\bfseries\color{Navy}Washington Segundo}\par
@@ -211,7 +211,7 @@
 \end{frame}}
 
 % 2 --------------------------------------------------------------------------
-\begin{frame}{A ciência aberta redesenha todo o ciclo da pesquisa}
+\begin{frame}[shrink=8]{A ciência aberta redesenha todo o ciclo da pesquisa}
   \begin{columns}[T,onlytextwidth]
     \column{.52\textwidth}
       \begin{center}\resizebox{.90\linewidth}{!}{\OpenScienceCycleDiagram}\end{center}
@@ -269,7 +269,7 @@
 \end{frame}
 
 % 5 --------------------------------------------------------------------------
-\begin{frame}{O Ibict tem moldado a informação científica}
+\begin{frame}[shrink=2]{O Ibict tem moldado a informação científica}
   \begin{columns}[T,onlytextwidth]
     \column{.30\textwidth}
       \vspace{0.10cm}
@@ -359,7 +359,7 @@
 \end{frame}
 
 % 9 --------------------------------------------------------------------------
-\begin{frame}{Modelos de acesso aberto distribuem custos e poder}
+\begin{frame}[shrink=7]{Modelos de acesso aberto distribuem custos e poder}
   \small
   \begin{tabular}{@{}p{2.15cm}p{3.0cm}p{3.35cm}p{3.25cm}@{}}
     \toprule
@@ -382,11 +382,11 @@
 \begin{frame}{Uma IA confiável começa com uma infraestrutura de pesquisa confiável}
   \begin{center}\resizebox{.90\linewidth}{!}{\OpenInfraestruturaDiagram}\end{center}
   \vspace{0.18cm}
-  \begin{center}\small\color{Muted}Preservação e interoperabilidade transformam objetos armazenados em evidências reutilizáveis.\end{center}
+  \begin{center}\footnotesize\color{Muted}Preservação e interoperabilidade transformam objetos armazenados em evidências reutilizáveis.\end{center}
 \end{frame}
 
 % 11 -------------------------------------------------------------------------
-\begin{frame}{Sistemas semânticos conectam significados, não apenas palavras-chave}
+\begin{frame}[shrink=7]{Sistemas semânticos conectam significados, não apenas palavras-chave}
   \begin{columns}[T,onlytextwidth]
     \column{.58\textwidth}
       \tagline{Um fluxo de recuperação fundamentada}\par
@@ -457,7 +457,7 @@
 \end{frame}
 
 % 26 -------------------------------------------------------------------------
-\begin{frame}{Infraestruturas abertas promovem um conjunto estratégico de ODS}
+\begin{frame}[shrink=5]{Infraestruturas abertas promovem um conjunto estratégico de ODS}
   \begin{columns}[T,onlytextwidth]
     \column{.48\textwidth}
       \keypoint{ODS 4 -- Educação de Qualidade}{O conhecimento científico aberto fortalece a educação superior, a pesquisa e o letramento informacional.}
@@ -570,7 +570,7 @@
 \end{frame}
 
 % 16 -------------------------------------------------------------------------
-\begin{frame}{O Ibict conecta o ecossistema nacional em camadas}
+\begin{frame}[shrink=5]{O Ibict conecta o ecossistema nacional em camadas}
   \small
   \begin{columns}[T,onlytextwidth]
     \column{.48\textwidth}
@@ -587,7 +587,7 @@
       \begin{itemize}\setlength\itemsep{0.10cm}
         \item Oasisbr para descoberta unificada
         \item Redes nacionais de repositórios e padrões compartilhados
-        \item International exchange through open protocols
+        \item Intercâmbio internacional por protocolos abertos
       \end{itemize}
     \column{.48\textwidth}
       \tagline{Analisar e governar}
@@ -615,18 +615,18 @@
 
   \begin{columns}[T,onlytextwidth]
     \column{.24\textwidth}\centering
-      \textbf{Dados integrados}\\[-1pt]{\scriptsize\color{Muted}Abertos, governados e interoperáveis}
+      \textbf{Dados integrados}\\[-1pt]{\footnotesize\color{Muted}Abertos, governados e interoperáveis}
     \column{.24\textwidth}\centering
-      \textbf{Accessible knowledge}\\[-1pt]{\scriptsize\color{Muted}Estruturado e localizável}
+      \textbf{Conhecimento acessível}\\[-1pt]{\footnotesize\color{Muted}Estruturado e localizável}
     \column{.24\textwidth}\centering
-      \textbf{Evidence-based innovation}\\[-1pt]{\scriptsize\color{Muted}Research translated into action}
+      \textbf{Inovação baseada em evidências}\\[-1pt]{\footnotesize\color{Muted}Pesquisa traduzida em ação}
     \column{.24\textwidth}\centering
-      \textbf{Benefício público}\\[-1pt]{\scriptsize\color{Muted}Sistemas mais resilientes e equitativos}
+      \textbf{Benefício público}\\[-1pt]{\footnotesize\color{Muted}Sistemas mais resilientes e equitativos}
   \end{columns}
 \end{frame}
 
 % 18 -------------------------------------------------------------------------
-\begin{frame}{Três infraestruturas complementares fortalecem a pesquisa brasileira}
+\begin{frame}[shrink=2]{Três infraestruturas complementares fortalecem a pesquisa brasileira}
   \begin{columns}[T,onlytextwidth]
     \column{.31\textwidth}
       \tagline{BrCris}
@@ -640,12 +640,12 @@
       \end{itemize}
       \small\color{Muted}Viabiliza visibilidade, governança, avaliação e políticas baseadas em evidências.
     \column{.31\textwidth}
-      \tagline{dARK network}
+      \tagline{Rede dARK}
       \vspace{0.23cm}
-      \textbf{Keeps resources identifiable}
+      \textbf{Mantém recursos identificáveis}
       \vspace{0.15cm}
       \begin{itemize}\setlength\itemsep{0.18cm}
-        \item Persistent ARK identifiers
+        \item Identificadores ARK persistentes
         \item Rastreabilidade e citação
         \item Acesso de longo prazo
       \end{itemize}
@@ -656,9 +656,9 @@
       \textbf{Integra dados heterogêneos}
       \vspace{0.15cm}
       \begin{itemize}\setlength\itemsep{0.18cm}
-        \item Semantic enrichment
-        \item Interoperability
-        \item Large-scale discovery
+        \item Enriquecimento semântico
+        \item Interoperabilidade
+        \item Descoberta em larga escala
       \end{itemize}
       \small\color{Muted}Transforma fontes isoladas em um ambiente analítico compartilhado.
   \end{columns}
@@ -811,7 +811,7 @@
 \end{frame}
 
 % 23 -------------------------------------------------------------------------
-\begin{frame}{A BDTD dá visibilidade à pesquisa de pós-graduação}
+\begin{frame}[shrink=12]{A BDTD dá visibilidade à pesquisa de pós-graduação}
   \begin{columns}[T,onlytextwidth]
     \column{.58\textwidth}
       \tagline{Um serviço nacional desde 2002}
@@ -828,7 +828,7 @@
       \begin{itemize}\setlength\itemsep{0.26cm}
         \item Visibilidade para a pesquisa de pós-graduação
         \item Padrões compartilhados de metadados
-        \item Institutional interoperability
+        \item Interoperabilidade institucional
         \item Acesso ao conhecimento especializado
         \item Prestação de contas do investimento público
       \end{itemize}
@@ -838,7 +838,7 @@
 \end{frame}
 
 % 24 -------------------------------------------------------------------------
-\begin{frame}{Oasisbr, BDTD e BrCris desempenham papéis distintos}
+\begin{frame}[shrink=3]{Oasisbr, BDTD e BrCris desempenham papéis distintos}
   \small
   \begin{tabular}{@{}p{2.0cm}p{3.3cm}p{3.45cm}p{3.25cm}@{}}
     \toprule
@@ -899,7 +899,7 @@
 
 
 % 28 -------------------------------------------------------------------------
-\begin{frame}{O Brasil precisa de um plano nacional de implementação}
+\begin{frame}[shrink=6]{O Brasil precisa de um plano nacional de implementação}
   \begin{columns}[T,onlytextwidth]
     \column{.48\textwidth}
       \tagline{Arquitetura de políticas}
@@ -925,7 +925,7 @@
 \end{frame}
 
 % 29 -------------------------------------------------------------------------
-\begin{frame}{A agenda passa de projetos isolados para uma política duradoura}
+\begin{frame}[shrink=6]{A agenda passa de projetos isolados para uma política duradoura}
   \begin{columns}[T,onlytextwidth]
     \column{.48\textwidth}
       \tagline{Prioridades do sistema}
@@ -941,7 +941,7 @@
       \tagline{Ações dos pesquisadores}
       \vspace{0.18cm}
       \begin{itemize}\setlength\itemsep{0.25cm}
-        \item Publish through open routes.
+        \item Publicar por vias abertas.
         \item Compartilhar dados e códigos documentados.
         \item Usar identificadores persistentes e licenças abertas.
         \item Participar de avaliação transparente e ciência cidadã.
@@ -963,7 +963,7 @@
   \end{center}
   \vspace{0.35cm}
   \begin{center}
-    \Large\color{Navy}\textbf{Infraestrutura + política pública + prática científica + movimento social}
+    \Large\color{Navy}\textbf{\small Infraestrutura + política pública + prática científica + impacto social}
   \end{center}
   \vspace{0.25cm}
   \begin{center}
@@ -1045,39 +1045,7 @@
     \node[font=\small\bfseries,text=Teal]
       at ([yshift=.55cm]current page.center) {washingtonsegundo@ibict.br};
 
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-4.20cm,yshift=-.20cm]current page.center)
-      {{\worldlatin\large Aguyjevete}\\[-1pt]\scriptsize\color{Muted}Guarani};
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-1.40cm,yshift=-.20cm]current page.center)
-      {{\worldlatin\large Sulpayki}\\[-1pt]\scriptsize\color{Muted}Quéchua};
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=1.40cm,yshift=-.20cm]current page.center)
-      {{\worldlatin\large Asante}\\[-1pt]\scriptsize\color{Muted}Swahili / Bantu};
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=4.20cm,yshift=-.20cm]current page.center)
-      {{\worldlatin\large Ngiyabonga}\\[-1pt]\scriptsize\color{Muted}Zulu / Bantu};
 
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-4.20cm,yshift=-1.25cm]current page.center)
-      {{\worldlatin\large Ẹ ṣé}\\[-1pt]\scriptsize\color{Muted}Iorubá};
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=-1.40cm,yshift=-1.25cm]current page.center)
-      {{\worldlatin\large Na gode}\\[-1pt]\scriptsize\color{Muted}Hauçá};
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=1.40cm,yshift=-1.25cm]current page.center)
-      {{\devanagarifont\large धन्यवाद}\\[-1pt]\scriptsize\color{Muted}Hindi};
-    \node[align=center,text width=2.55cm,text=Navy] at ([xshift=4.20cm,yshift=-1.25cm]current page.center)
-      {{\bengalifont\large ধন্যবাদ}\\[-1pt]\scriptsize\color{Muted}Bengali};
-
-    \node[align=center,text width=2.20cm,text=Navy] at ([xshift=-4.80cm,yshift=-2.45cm]current page.center)
-      {{\tamilfont\large நன்றி}\\[-1pt]\scriptsize\color{Muted}Tâmil};
-    \node[align=center,text width=2.20cm,text=Navy] at ([xshift=-2.40cm,yshift=-2.45cm]current page.center)
-      {{\ethiopicfont\large አመሰግናለሁ}\\[-1pt]\scriptsize\color{Muted}Amárico};
-    \node[align=center,text width=2.20cm,text=Navy] at ([yshift=-2.45cm]current page.center)
-      {{\worldlatin\large Terima kasih}\\[-1pt]\scriptsize\color{Muted}Indonésio};
-    \node[align=center,text width=2.20cm,text=Navy] at ([xshift=2.40cm,yshift=-2.45cm]current page.center)
-      {{\chinesefont\large 谢谢}\\[-1pt]\scriptsize\color{Muted}Chinês};
-    \node[align=center,text width=2.20cm,text=Navy] at ([xshift=4.80cm,yshift=-2.45cm]current page.center)
-      {{\worldlatin\large Obrigado}\\[-1pt]\scriptsize\color{Muted}Português};
-
-    \node[anchor=south east] at ([xshift=-.34cm,yshift=.34cm]current page.south east)
-      {\href{\ccLicenseURL}{\includegraphics[width=.66cm]{assets/cc-by-nc-sa-4.0.png}}};
-    \node[anchor=north east,fill=white,inner sep=3pt] at
-      ([xshift=-.55cm,yshift=-.55cm]current page.north east)
       {\href{https://github.com/washingtonsegundo/open-science-presentation}{\includegraphics[height=1.65cm]{assets/qr-github-repository.png}}};
   \end{tikzpicture}
 \end{frame}}
