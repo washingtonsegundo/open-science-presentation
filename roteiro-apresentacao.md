@@ -252,7 +252,23 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “O Ibict atua justamente conectando essas capacidades em diferentes camadas.”
 
-## Slide 18 — O Ibict conecta o ecossistema nacional em camadas
+## Slide 18 — Redes conectam capacidades nacionais à cooperação global
+
+**Mensagem-chave:** a participação do Ibict em redes amplia capacidades, compartilha padrões e conecta o Brasil à cooperação regional e internacional.
+
+**O que realçar:**
+
+- Rede Brasileira de Repositórios Digitais: articulação, formação e boas práticas para repositórios brasileiros.
+- Rede Brasileira de Reprodutibilidade: promoção de práticas de pesquisa transparentes, confiáveis e reprodutíveis.
+- LA Referencia: interoperabilidade e acesso aberto entre nós nacionais da América Latina e Espanha.
+- COAR: alinhamento global de políticas, práticas e inovação na comunidade de repositórios.
+- Os quatro blocos do diagrama são clicáveis e levam aos sites oficiais.
+
+**Sugestão de fala:** “Infraestruturas abertas não se desenvolvem isoladamente. Nessas redes, compartilhamos experiências nacionais, construímos padrões comuns e participamos de discussões regionais e globais sobre o futuro dos repositórios, da reprodutibilidade e da ciência aberta.”
+
+**Transição:** “Essa cooperação em rede fortalece as diferentes camadas de serviços que o Ibict conecta no país.”
+
+## Slide 19 — O Ibict conecta o ecossistema nacional em camadas
 
 **Mensagem-chave:** serviços especializados tornam-se mais valiosos quando operam como partes de uma arquitetura comum.
 
@@ -268,7 +284,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Essa arquitetura transforma dados dispersos em benefícios públicos concretos.”
 
-## Slide 19 — A infraestrutura científica viabiliza o desenvolvimento sustentável
+## Slide 20 — A infraestrutura científica viabiliza o desenvolvimento sustentável
 
 **Mensagem-chave:** a cadeia de valor começa em dados integrados e termina em benefício público.
 
@@ -283,7 +299,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Três iniciativas ilustram funções complementares dentro dessa visão.”
 
-## Slide 20 — Três infraestruturas complementares fortalecem a pesquisa brasileira
+## Slide 21 — Três infraestruturas complementares fortalecem a pesquisa brasileira
 
 **Mensagem-chave:** BrCris, dARK e Project Laguna resolvem problemas diferentes e conectados.
 
@@ -298,7 +314,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “O diagrama seguinte detalha como essa integração acontece no Project Laguna.”
 
-## Slide 21 — Arquitetura do Project Laguna
+## Slide 22 — Arquitetura do Project Laguna
 
 **Mensagem-chave:** o Laguna transforma fontes heterogêneas em uma camada semântica reutilizável.
 
@@ -314,7 +330,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Uma aplicação nacional dessa lógica de integração é o BrCris.”
 
-## Slide 22 — O BrCris oferece uma visão nacional da pesquisa brasileira
+## Slide 23 — O BrCris oferece uma visão nacional da pesquisa brasileira
 
 **Mensagem-chave:** o BrCris é uma porta pública para compreender a produção científica do país.
 
@@ -329,7 +345,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Essa visão é possível porque o sistema conecta vários tipos de entidades e fontes.”
 
-## Slide 23 — O BrCris conecta atores, resultados e infraestruturas
+## Slide 24 — O BrCris conecta atores, resultados e infraestruturas
 
 **Mensagem-chave:** o BrCris funciona como um grafo do ecossistema científico brasileiro.
 
@@ -344,7 +360,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “O processo de integração converte esses registros em inteligência para decisão.”
 
-## Slide 24 — A integração transforma registros em inteligência para políticas
+## Slide 25 — A integração transforma registros em inteligência para políticas
 
 **Mensagem-chave:** a qualidade analítica depende de um pipeline cuidadoso de integração.
 
@@ -359,7 +375,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “A interface do BrCris torna esse trabalho acessível ao público.”
 
-## Slide 25 — Demonstração do portal BrCris
+## Slide 26 — Demonstração do portal BrCris
 
 **Mensagem-chave:** mostrar o serviço como ponto de acesso prático ao ecossistema integrado.
 
@@ -373,7 +389,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Enquanto o BrCris conecta o sistema de pesquisa, Oasisbr e BDTD ampliam a descoberta de seus objetos digitais.”
 
-## Slide 26 — O Oasisbr conecta mais de 6,5 milhões de objetos digitais abertos
+## Slide 27 — O Oasisbr conecta mais de 6,5 milhões de objetos digitais abertos
 
 **Mensagem-chave:** o Oasisbr é uma grande infraestrutura brasileira de agregação e descoberta de conteúdo aberto.
 
@@ -388,7 +404,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Dentro desse universo, a BDTD oferece um foco específico e estratégico na pós-graduação.”
 
-## Slide 27 — A BDTD dá visibilidade à pesquisa de pós-graduação
+## Slide 28 — A BDTD dá visibilidade à pesquisa de pós-graduação
 
 **Mensagem-chave:** a BDTD preserva e amplia o acesso ao conhecimento produzido em teses e dissertações.
 
@@ -403,7 +419,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Os três serviços podem parecer próximos, mas cumprem papéis claramente distintos.”
 
-## Slide 28 — Oasisbr, BDTD e BrCris desempenham papéis distintos
+## Slide 29 — Oasisbr, BDTD e BrCris desempenham papéis distintos
 
 **Mensagem-chave:** descoberta de conteúdo, memória da pós-graduação e inteligência do sistema são funções complementares.
 
@@ -418,7 +434,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Para que essas conexões permaneçam confiáveis, também precisamos controlar persistência e identificação.”
 
-## Slide 29 — O dARK transforma persistência em soberania regional
+## Slide 30 — O dARK transforma persistência em soberania regional
 
 **Mensagem-chave:** identificadores e resolução persistente são componentes estratégicos da soberania informacional.
 
@@ -433,7 +449,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “A interface mostra como esse serviço pode ser acessado e explorado.”
 
-## Slide 30 — Demonstração do portal dARK
+## Slide 31 — Demonstração do portal dARK
 
 **Mensagem-chave:** apresentar o dARK como serviço operacional, não apenas como conceito.
 
@@ -447,7 +463,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Para que iniciativas como essas alcancem todo o país, é necessário um plano nacional de implementação.”
 
-## Slide 31 — O Brasil precisa de um plano nacional de implementação
+## Slide 32 — O Brasil precisa de um plano nacional de implementação
 
 **Mensagem-chave:** princípios de ciência aberta precisam ser convertidos em responsabilidades, mecanismos e etapas executáveis.
 
@@ -462,7 +478,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Isso exige passar de projetos isolados para uma agenda duradoura.”
 
-## Slide 32 — A agenda passa de projetos isolados para uma política duradoura
+## Slide 33 — A agenda passa de projetos isolados para uma política duradoura
 
 **Mensagem-chave:** sustentabilidade depende de alinhar ações individuais, institucionais e sistêmicas.
 
@@ -477,7 +493,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Por isso, ciência aberta deve ser tratada como investimento estratégico.”
 
-## Slide 33 — A ciência aberta é um investimento estratégico
+## Slide 34 — A ciência aberta é um investimento estratégico
 
 **Mensagem-chave:** investir em ciência aberta fortalece confiança, colaboração, inclusão, soberania e sustentabilidade.
 
@@ -493,7 +509,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Uma oportunidade concreta para aprofundar essa colaboração ocorrerá no Brasil em 2027.”
 
-## Slide 34 — Salvador/Brasil conecta comunidades de repositórios em 2027
+## Slide 35 — Salvador/Brasil conecta comunidades de repositórios em 2027
 
 **Mensagem-chave:** os dois eventos conectam a comunidade internacional de repositórios à cooperação brasileira.
 
@@ -508,7 +524,7 @@ Este roteiro acompanha a versão em português da apresentação. As sugestões 
 
 **Transição:** “Concluo retomando a ideia de que a ciência aberta se constrói por redes, diversidade e cooperação.”
 
-## Slide 35 — Obrigado!
+## Slide 36 — Obrigado!
 
 **Mensagem-chave:** encerrar com abertura ao diálogo, diversidade linguística e convite ao reúso.
 
