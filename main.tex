@@ -51,7 +51,7 @@
 \setbeamertemplate{footline}{%
   \leavevmode\hbox{%
   \begin{beamercolorbox}[wd=.88\paperwidth,ht=2.5ex,dp=1.1ex,leftskip=.65cm]{normal text}%
-    \scriptsize\color{Muted}High-Level Conference on International Open Science Cooperation, Shanghai, 11 September 2026
+    %\scriptsize\color{Muted}High-Level Conference on International Open Science Cooperation, Shanghai, 11 September 2026
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.5ex,dp=1.1ex,center]{normal text}%
     \scriptsize\color{Muted}\insertframenumber
@@ -124,11 +124,11 @@
   \draw[diagram arrow] (curation) -- (analysis);
   \draw[diagram arrow] (analysis) -- (ai);
   \draw[diagram arrow] (ai) -- (value);
-  \node[font=\scriptsize,text=Muted,below=.22cm of objects] {Data, publications, code};
-  \node[font=\scriptsize,text=Muted,below=.22cm of curation] {Context and provenance};
-  \node[font=\scriptsize,text=Muted,below=.22cm of analysis] {Patterns and evidence};
+  \node[font=\scriptsize,text=Muted,below=.22cm of objects] {Data/code/publications};
+  \node[font=\scriptsize,text=Muted,below=.22cm of curation] {Context/provenance};
+  \node[font=\scriptsize,text=Muted,below=.22cm of analysis] {Patterns/evidence};
   \node[font=\scriptsize,text=Muted,below=.22cm of ai] {Grounded automation};
-  \node[font=\scriptsize,text=Muted,below=.22cm of value] {Decisions and services};
+  \node[font=\scriptsize,text=Muted,below=.22cm of value] {Decisions/services};
 \end{tikzpicture}}
 
 \newcommand{\OpenInfrastructureDiagram}{%
@@ -224,7 +224,7 @@
         \item Governance, preservation, and participation are part of scientific quality.
       \end{itemize}
       \vspace{0.22cm}
-      \colorbox{Mist}{\parbox{.93\linewidth}{\small\textbf{Core idea:} knowledge should be accessible, auditable, interoperable, and useful to society.}}
+      \colorbox{Mist}{\parbox{.93\linewidth}{\small\textbf{Core idea:} knowledge should be \\ accessible, auditable, interoperable, and \\ useful to society.}}
   \end{columns}
 \end{frame}
 
@@ -236,10 +236,10 @@
   \begin{columns}[T,onlytextwidth]
     \column{.32\textwidth}\centering
       \textbf{Information Science}\\[-1pt]
-      {\scriptsize\color{Muted}Organizes, curates, represents, and mediates knowledge}
+      {\scriptsize\color{Muted}Organises, curates, represents, and mediates knowledge}
     \column{.32\textwidth}\centering
       \textbf{Data Science}\\[-1pt]
-      {\scriptsize\color{Muted}Analyzes patterns, models phenomena, and extracts value}
+      {\scriptsize\color{Muted}Analyses patterns, models phenomena, and extracts value}
     \column{.32\textwidth}\centering
       \textbf{Artificial Intelligence}\\[-1pt]
       {\scriptsize\color{Muted}Automates cognition, prediction, and language interaction}
@@ -254,7 +254,7 @@
     \foreach \x/\yr/\head/\copy in {
       0/1600s/Letters/Private scholarly exchange,
       1/1665/Journals/Public record and priority,
-      2/1990s/Web/Digital dissemination,
+      2/1990s/Web/Digital\\dissemination,
       3/2002--03/Open access/BBB declarations,
       4/2021/Open science/UNESCO framework}
     {
@@ -296,19 +296,45 @@
 \end{frame}
 
 % 6 --------------------------------------------------------------------------
+% Source: Tiago Emmanuel Nunes Braga, "A Ciência da Informação e os desafios
+% contemporâneos", Ciência da Informação, v. 55, n. 1, 2026.
+\begin{frame}{Four axes turn information into public value}
+  \vspace{0.08cm}
+  \begin{columns}[T,onlytextwidth]
+    \column{.49\textwidth}
+      \keypoint{Information integrity and justice}{Preserve authorship and meaning across the information cycle while ensuring equitable production, access, and use.}
+      \vspace{0.28cm}
+
+      \keypoint{Information for citizenship}{Build critical, media, and data literacy for a multilingual, accessible, and socially inclusive information environment.}
+    \column{.49\textwidth}
+      \keypoint{Information sovereignty}{Strengthen public control over information flows, service infrastructures, algorithms, standards, software, and hardware.}
+      \vspace{0.28cm}
+
+      \keypoint{Open Science}{Open research practices strengthen public trust, cooperation, and science diplomacy.}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \small\color{Muted}\textbf{Information Science connects the four axes} to support social, environmental, and economic development.
+
+    \vspace{0.09cm}
+    {\tiny Source: Braga, \textit{Ciência da Informação}, vol. 55, no. 1, 2026.}
+  \end{center}
+\end{frame}
+
+% 7 --------------------------------------------------------------------------
 \begin{frame}{The ecosystem is broader than open access}
   \vspace{0.15cm}
   \begin{columns}[T,onlytextwidth]
     \column{.49\textwidth}
-      \keypoint{Open outputs}{Publications, research data, software, methods, and educational resources.}
+      \keypoint{Open outputs}{Publications, research data, software,\\ methods, and educational resources.}
       \vspace{0.28cm}
 
-      \keypoint{Open processes}{Preprints, transparent peer review, responsible assessment, and reproducible workflows.}
+      \keypoint{Open processes}{Preprints, transparent peer review, \\responsible assessment, and reproducible workflows.}
     \column{.49\textwidth}
-      \keypoint{Open infrastructures}{Repositories, identifiers, metadata standards, preservation, and research information systems.}
+      \keypoint{Open infrastructures}{Repositories, identifiers, metadata standards, preservation, and research information \\systems.}
       \vspace{0.28cm}
 
-      \keypoint{Open participation}{Citizen science, knowledge dialogue, inclusion, and public engagement.}
+      \keypoint{Open participation}{Citizen science, knowledge dialogue, \\ inclusion, and public engagement.}
   \end{columns}
   \vfill
   \begin{center}\alert{Infrastructure connects every pillar and keeps openness sustainable.}\end{center}
@@ -318,44 +344,47 @@
 \begin{frame}{Four principles balance technical value and social responsibility}
   \begin{columns}[T,onlytextwidth]
     \column{.49\textwidth}
-      \keypoint{FAIR}{Make data findable, accessible, interoperable, and reusable for people and machines.}
+      \keypoint{FAIR}{Make data findable, accessible, \\interoperable, and reusable for people and machines.}
       \vspace{0.28cm}
 
-      \keypoint{CARE}{Protect collective benefit, authority, responsibility, and ethics in data governance.}
+      \keypoint{CARE}{Protect collective benefit, authority, \\responsibility, and ethics in data governance.}
     \column{.49\textwidth}
-      \keypoint{TRUST}{Build transparent, responsible, user-focused, sustainable, and technically sound repositories.}
+      \keypoint{TRUST}{Build transparent, responsible, user-focused, sustainable, and technically sound\\ infrastructures.}
       \vspace{0.28cm}
 
-      \keypoint{DEIA}{Embed diversity, equity, inclusion, and accessibility in research systems.}
+      \keypoint{DEIA}{Embed diversity, equity, inclusion, and \\accessibility in research systems.}
   \end{columns}
   \vfill
   \begin{center}\small\textbf{Rule of thumb:} as open as possible, as closed as necessary.\end{center}
+
+  \begin{center}\alert{Maximize openness effectively, strategically, inclusively, and responsibly}\end{center}
+
 \end{frame}
 
 % 8 --------------------------------------------------------------------------
-\begin{frame}{Communication and assessment are moving toward transparency}
-  \begin{columns}[T,onlytextwidth]
-    \column{.56\textwidth}
-      \tagline{Publish -- Review -- Curate}
-      \vspace{0.35cm}
-      \stage{1}{Publish early}
-      \hfill\textcolor{Coral}{\Large$\rightarrow$}\hfill
-      \stage{2}{Review openly}
-      \hfill\textcolor{Coral}{\Large$\rightarrow$}\hfill
-      \stage{3}{Curate quality}
-      \vspace{0.38cm}
+%\begin{frame}{Communication and assessment are moving toward transparency}
+%  \begin{columns}[T,onlytextwidth]
+%    \column{.56\textwidth}
+%      \tagline{Publish -- Review -- Curate}
+%      \vspace{0.35cm}
+%      \stage{1}{Publish early}
+%      \hfill\textcolor{Coral}{\Large$\rightarrow$}\hfill
+%      \stage{2}{Review openly}
+%      \hfill\textcolor{Coral}{\Large$\rightarrow$}\hfill
+%      \stage{3}{Curate quality}
+%      \vspace{0.38cm}
 
-      \small Preprints accelerate circulation; open reviews expose reasoning; curation adds context and certification.
-    \column{.40\textwidth}
-      \tagline{Responsible assessment}
-      \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.28cm}
-        \item Judge the work, not the journal.
-        \item Value data, software, methods, review, and social impact.
-        \item Combine expert judgment with contextual metrics.
-      \end{itemize}
-  \end{columns}
-\end{frame}
+%      \small Preprints accelerate circulation; open reviews expose reasoning; curation adds context and certification.
+%    \column{.40\textwidth}
+%      \tagline{Responsible assessment}
+%      \vspace{0.22cm}
+%      \begin{itemize}\setlength\itemsep{0.28cm}
+%        \item Judge the work, not the journal.
+%        \item Value data, software, methods, review, and social impact.
+%        \item Combine expert judgment with contextual metrics.
+%      \end{itemize}
+%  \end{columns}
+%\end{frame}
 
 % 9 --------------------------------------------------------------------------
 \begin{frame}{Open access models distribute cost and power}
