@@ -1,8 +1,15 @@
 # Open Science presentation
 
 An English-language Beamer presentation about Open Science, information and
-data science, artificial intelligence, sustainable development, and Brazilian
-scientific information infrastructures led by Ibict.
+data science, artificial intelligence, and Brazilian public scientific
+information infrastructures led by Ibict. The narrative connects Brazil's
+experience to the Action Plan for International Cooperation in Open Science.
+
+## Presentation files
+
+- [View or download the latest compiled presentation (PDF)](open-science-presentation.pdf)
+- [Read the complete slide-by-slide presentation guide](presentation-guide.md)
+- [Edit the LaTeX source](main.tex)
 
 ## Local compilation
 
@@ -14,8 +21,8 @@ make pdf
 
 The compiled presentation is written to `build/main.pdf`.
 
-The repository also includes the latest compiled release as
-`open-science-presentation.pdf` for immediate viewing and download.
+The repository also includes the latest compiled release at the project root:
+[open-science-presentation.pdf](open-science-presentation.pdf).
 
 For automatic recompilation while editing:
 
