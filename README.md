@@ -5,6 +5,12 @@ data science, artificial intelligence, and Brazilian public scientific
 information infrastructures led by Ibict. The narrative connects Brazil's
 experience to the Action Plan for International Cooperation in Open Science.
 
+The revised 33-slide deck restores the SDG connection, groups the AI material,
+and includes preprints and publish, review, curate. It proposes a joint pilot
+for monitoring public policies related to social technologies and developing
+fairer research assessment tools, with CoARA as a reference. The updated guide
+provides a complete English speaking script timed for 20 minutes.
+
 ## Presentation files
 
 - [View or download the latest compiled presentation (PDF)](open-science-presentation.pdf)

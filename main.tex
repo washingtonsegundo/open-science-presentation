@@ -11,6 +11,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{ragged2e}
 \usepackage{hyperref}
 
@@ -57,7 +58,7 @@
     \scriptsize\color{Muted}\insertframenumber
   \end{beamercolorbox}}}
 
-\newcommand{\tagline}[1]{\textcolor{Teal}{\bfseries\small\MakeUppercase{#1}}}
+\newcommand{\tagline}[1]{\textcolor{Teal}{\bfseries\small#1}}
 \newcommand{\keypoint}[2]{%
   \begin{minipage}[t]{0.98\linewidth}
   \colorbox{Mist}{\parbox{0.92\linewidth}{\vspace{0.08cm}\textcolor{Navy}{\bfseries #1}\par\small #2\vspace{0.08cm}}}
@@ -166,8 +167,8 @@
 
 \begin{document}
 
-% 1 --------------------------------------------------------------------------
 {\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+% Slide 1
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture,overlay]
     % Background image intentionally disabled.
@@ -185,7 +186,7 @@
   \begin{minipage}{0.7\textwidth}
     \tagline{Open by design}
     \vspace{0.25cm}
-    {\fontsize{24}{27}\selectfont\bfseries\color{Navy}Open Science}
+    {\fontsize{24}{27}\selectfont\bfseries\color{Navy}Open science}
     \vspace{0.2cm}
 
     {\usebeamerfont{subtitle}\color{Ink}Open infrastructure for equitable cooperation}
@@ -203,7 +204,7 @@
   \end{minipage}
 \end{frame}}
 
-% 2 --------------------------------------------------------------------------
+% Slide 2
 \begin{frame}{Open science redesigns the entire research cycle}
   \begin{columns}[T,onlytextwidth]
     \column{.52\textwidth}
@@ -212,35 +213,17 @@
       \vspace{0.18cm}
       \tagline{A paradigm shift}
       \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.35cm}
+      \begin{itemize}\setlength\itemsep{0.22cm}
         \item Openness begins at planning, not after publication.
         \item Publications, data, code, methods, and reviews become reusable outputs.
         \item Governance, preservation, and participation are part of scientific quality.
       \end{itemize}
       \vspace{0.22cm}
-      \colorbox{Mist}{\parbox{.93\linewidth}{\small\textbf{Core idea:} knowledge should be \\ accessible, auditable, interoperable, and \\ useful to society.}}
+      \colorbox{Mist}{\parbox{.93\linewidth}{\small\textbf{Core idea:} knowledge should be accessible, auditable, interoperable, and useful to society.}}
   \end{columns}
 \end{frame}
 
-% 3 --------------------------------------------------------------------------
-\begin{frame}{Information Science is the foundation of reliable AI}
-  \begin{center}\resizebox{.94\linewidth}{!}{\KnowledgeValueChainDiagram}\end{center}
-  \vspace{-0.08cm}
-
-  \begin{columns}[T,onlytextwidth]
-    \column{.32\textwidth}\centering
-      \textbf{Information Science}\\[-1pt]
-      {\scriptsize\color{Muted}Organises, curates, represents, and mediates knowledge}
-    \column{.32\textwidth}\centering
-      \textbf{Data Science}\\[-1pt]
-      {\scriptsize\color{Muted}Analyses patterns, models phenomena, and extracts value}
-    \column{.32\textwidth}\centering
-      \textbf{Artificial Intelligence}\\[-1pt]
-      {\scriptsize\color{Muted}Automates cognition, prediction, and language interaction}
-  \end{columns}
-\end{frame}
-
-% 4 --------------------------------------------------------------------------
+% Slide 3
 \begin{frame}{A long evolution led from private exchange to open ecosystems}
   \vspace{0.3cm}
   \begin{tikzpicture}[x=2.65cm,y=1cm]
@@ -261,7 +244,7 @@
   \begin{center}\colorbox{Mist}{\parbox{.88\linewidth}{\centering\small Digital networks separated the traditional functions of journals: record, certification, dissemination, and preservation.}}\end{center}
 \end{frame}
 
-% 5 --------------------------------------------------------------------------
+% Slide 4
 \begin{frame}{Ibict has shaped scientific information}
   \begin{columns}[T,onlytextwidth]
     \column{.30\textwidth}
@@ -289,9 +272,7 @@
   \end{columns}
 \end{frame}
 
-% 6 --------------------------------------------------------------------------
-% Source: Tiago Emmanuel Nunes Braga, "A Ciência da Informação e os desafios
-% contemporâneos", Ciência da Informação, v. 55, n. 1, 2026.
+% Slide 5
 \begin{frame}{Four axes turn information into public value}
   \vspace{0.08cm}
   \begin{columns}[T,onlytextwidth]
@@ -315,9 +296,14 @@
   \end{center}
 \end{frame}
 
-% 7 --------------------------------------------------------------------------
-% Source: Action Plan for International Cooperation in Open Science, 2025.
-% https://en.most.gov.cn/pressroom/202512/t20251219_195559.html
+% Slide 6
+\begin{frame}{Open infrastructures connect research to the SDGs}
+\begin{columns}[T,onlytextwidth]\column{.48\textwidth}\keypoint{SDG 4: Quality education}{Open knowledge, education and training, and skills development.}\vspace{.22cm}\par\keypoint{SDG 9: Industry, innovation and infrastructure}{Interoperable public systems for research and innovation.}\vspace{.22cm}\par\keypoint{SDG 10: Reduced inequalities}{More equitable participation and visibility across communities.}\column{.48\textwidth}\keypoint{SDG 16: Peace, justice and strong institutions}{Evidence for policy monitoring and public accountability.}\vspace{.22cm}\par\keypoint{SDG 17: Partnerships for the goals}{Shared standards, tools, and institutional cooperation.}\vspace{.22cm}\par\small Social technologies connect research with locally defined public needs.\end{columns}
+\vfill
+\begin{center}\small Proposed pathways to public benefit, with outcomes to be evaluated.\\[.08cm]{\tiny Source: \href{https://sdgs.un.org/goals}{United Nations Sustainable Development Goals}.}\end{center}
+\end{frame}
+
+% Slide 7
 \begin{frame}{\href{https://en.most.gov.cn/pressroom/202512/t20251219_195559.html}{A Global South action plan} turns principles into action}
   \vspace{0.05cm}
   \begin{center}
@@ -329,24 +315,24 @@
     \vspace{0.05cm}
     universal access \quad $\vert$ \quad open collaboration
   \end{center}
-  \vspace{0.25cm}
+  \vspace{0.10cm}
   \begin{columns}[T,onlytextwidth]
     \column{.49\textwidth}
       \keypoint{1 \; Global governance}{Advance UNESCO principles through joint governance and monitoring.}
-      \vspace{0.12cm}
+      \vspace{0.04cm}
       \keypoint{2 \; Open data cooperation}{Connect platforms for ethical and sustainable sharing.}
-      \vspace{0.12cm}
-      \keypoint{3 \; Shared infrastructure}{Co-develop public services, trusted data spaces, and AI for science.}
+      \vspace{0.04cm}
+      \keypoint{3 \; Shared infrastructure}{Co-develop public services and trusted data spaces.}
     \column{.49\textwidth}
       \keypoint{4 \; Open scholarly communication}{Share papers and preprints through inclusive infrastructures.}
-      \vspace{0.12cm}
+      \vspace{0.04cm}
       \keypoint{5 \; Public engagement}{Build culture, education, communication, and participation.}
-      \vspace{0.12cm}
-      \keypoint{6 \; Capacity in developing countries}{Invest in skills, exchange, local capability, and open technology.}
+      \vspace{0.04cm}
+      \keypoint{6 \; Skills in developing countries}{Develop skills through exchange and open technology.}
   \end{columns}
 \end{frame}
 
-% 8 --------------------------------------------------------------------------
+% Slide 8
 \begin{frame}{The ecosystem is broader than open access}
   \vspace{0.15cm}
   \begin{columns}[T,onlytextwidth]
@@ -365,7 +351,7 @@
   \begin{center}\alert{Infrastructure connects every pillar and keeps openness sustainable.}\end{center}
 \end{frame}
 
-% 7 --------------------------------------------------------------------------
+% Slide 9
 \begin{frame}{Four principles balance technical value and social responsibility}
   \begin{columns}[T,onlytextwidth]
     \column{.49\textwidth}
@@ -386,113 +372,53 @@
 
 \end{frame}
 
-% 8 --------------------------------------------------------------------------
-%\begin{frame}{Communication and assessment are moving toward transparency}
-%  \begin{columns}[T,onlytextwidth]
-%    \column{.56\textwidth}
-%      \tagline{Publish -- Review -- Curate}
-%      \vspace{0.35cm}
-%      \stage{1}{Publish early}
-%      \hfill\textcolor{Coral}{\Large$\rightarrow$}\hfill
-%      \stage{2}{Review openly}
-%      \hfill\textcolor{Coral}{\Large$\rightarrow$}\hfill
-%      \stage{3}{Curate quality}
-%      \vspace{0.38cm}
-
-%      \small Preprints accelerate circulation; open reviews expose reasoning; curation adds context and certification.
-%    \column{.40\textwidth}
-%      \tagline{Responsible assessment}
-%      \vspace{0.22cm}
-%      \begin{itemize}\setlength\itemsep{0.28cm}
-%        \item Judge the work, not the journal.
-%        \item Value data, software, methods, review, and social impact.
-%        \item Combine expert judgment with contextual metrics.
-%      \end{itemize}
-%  \end{columns}
-%\end{frame}
-
-% 9 --------------------------------------------------------------------------
+% Slide 10
 \begin{frame}{Open publishing must close the scientific information divide}
   \small
-  \begin{tabular}{@{}p{2.15cm}p{3.0cm}p{3.35cm}p{3.25cm}@{}}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.15cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{3.35cm}>{\raggedright\arraybackslash}p{3.25cm}@{}}
     \toprule
     \textbf{Route} & \textbf{How it opens \mbox{access}} & \textbf{Main strength} & \textbf{Main risk} \\
     \midrule
-    Green & Deposit in a \mbox{repository} & Uses public \mbox{infrastructure} and can avoid publication fees & Embargoes or \mbox{restrictive} publisher policies \\
+    Green & Deposit in a \mbox{repository} & Uses public infrastructure & Embargoes or \mbox{restrictive} publisher policies \\
     \addlinespace[0.14cm]
-    Gold & Immediate access on the publisher \mbox{platform} & The version of record is openly available & APCs can shift \mbox{exclusion} from readers to authors \\
+    Gold & Immediate access on the publisher \mbox{platform} & Open version of record & APCs, when charged, can exclude authors \\
     \addlinespace[0.14cm]
-    Diamond & No fees for readers or authors & Aligns publishing with the public interest & Requires durable \mbox{institutional} \mbox{funding} and shared \mbox{governance} \\
+    Diamond & No fees for readers or authors & Aligns publishing with the public interest & Sustained funding and governance \\
     \bottomrule
   \end{tabular}
   \vfill
   \begin{center}
-    \colorbox{Mist}{\parbox{.92\linewidth}{\centering\small Inclusive journals, repositories, and preprints must expand circulation without shifting exclusion from readers to authors.}}
+    \colorbox{Mist}{\parbox{.92\linewidth}{\centering\small Diamond publishing needs sustained funding, shared governance, and strong editorial standards.}}
   \end{center}
 \end{frame}
 
-% 10 -------------------------------------------------------------------------
-\begin{frame}{Trustworthy AI begins with trustworthy research infrastructure}
-  \begin{center}\resizebox{.90\linewidth}{!}{\OpenInfrastructureDiagram}\end{center}
-  \vspace{0.18cm}
-  \begin{center}\small\color{Muted}Preservation and interoperability turn stored objects into reusable evidence --- and enable the trusted data spaces and AI applications called for in Objective 3.\end{center}
-\end{frame}
-
-% 11 -------------------------------------------------------------------------
-\begin{frame}{Semantic systems connect meaning, not only keywords}
+% Slide 11
+\begin{frame}{Publish, review, curate: the power of preprints}
   \begin{columns}[T,onlytextwidth]
-    \column{.58\textwidth}
-      \tagline{A grounded retrieval flow}\par
-      \vspace{0.35cm}
-      \begin{tikzpicture}[node distance=.25cm, every node/.style={align=center}]
-        \node[draw=Navy,rounded corners=3pt,fill=Mist,minimum width=2.05cm,minimum height=1.05cm] (q) {\small User\\question};
-        \node[draw=Navy,rounded corners=3pt,fill=Mist,minimum width=2.05cm,minimum height=1.05cm,right=.35cm of q] (e) {\small Semantic\\embedding};
-        \node[draw=Navy,rounded corners=3pt,fill=Mist,minimum width=2.05cm,minimum height=1.05cm,right=.35cm of e] (r) {\small Curated\\collection};
-        \draw[very thick,->,Coral] (q) -- (e);
-        \draw[very thick,->,Coral] (e) -- (r);
-        \node[draw=Navy,rounded corners=3pt,fill=Cyan!18,minimum width=3.05cm,minimum height=1.05cm,below=.55cm of e] (a) {\small Grounded answer\\with evidence};
-        \draw[very thick,->,Teal] (r.south) |- (a.east);
-        \draw[very thick,->,Teal] (q.south) |- (a.west);
-      \end{tikzpicture}
-    \column{.38\textwidth}
-      \tagline{What makes it work}
-      \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.28cm}
-        \item Controlled vocabularies and ontologies reduce ambiguity.
-        \item Multilingual embeddings retrieve concepts across languages.
-        \item RAG grounds generated answers in real documents.
-        \item Rich metadata makes sources traceable and reusable.
-      \end{itemize}
+    \column{.31\textwidth}
+      \keypoint{1. Publish}{Share a preprint early, with a persistent identifier and clear version history.}
+    \column{.31\textwidth}
+      \keypoint{2. Review}{Invite critical evaluation and make reviews and author responses discoverable.}
+    \column{.31\textwidth}
+      \keypoint{3. Curate}{Select, contextualize, and recommend work using transparent editorial criteria.}
   \end{columns}
-\end{frame}
-
-% 27 -------------------------------------------------------------------------
-\begin{frame}{Applied AI creates value when the information base is ready}
-  \small
-  \begin{tabular}{@{}p{2.35cm}p{3.15cm}p{5.9cm}@{}}
-    \toprule
-    \textbf{Application} & \textbf{AI capability} & \textbf{Public-interest value} \\
-    \midrule
-    ServicesPI & Semantic search + NLP & Natural-language discovery across complex patent collections \\
-    \addlinespace[0.12cm]
-    Patente.IA & Text + image similarity & Broader detection of related inventions and prior art \\
-    \addlinespace[0.12cm]
-    RDAPP & NLP + semantic retrieval & Structured access and analysis across public-policy documents \\
-    \addlinespace[0.12cm]
-    SAVITS & BI + ML + LLM & Monitoring, prediction, and explainable impact assessment \\
-    \bottomrule
-  \end{tabular}
+  \vspace{.35cm}
+  \begin{itemize}\setlength\itemsep{.16cm}
+    \item Earlier access can accelerate feedback, collaboration, and reuse.
+    \item Link preprints, reviews, revised versions, and journal publications.
+    \item Display review status clearly. Early availability does not establish validity.
+  \end{itemize}
   \vfill
-  \begin{center}\colorbox{Mist}{\parbox{.9\linewidth}{\centering\small The recurring architecture is simple: \textbf{infrastructure $\rightarrow$ structured data $\rightarrow$ AI application}.}}\end{center}
+  {\tiny Source: \href{https://publish-review-curate.org/}{COAR and ASAPbio, Publish, Review, Curate initiative}.}
 \end{frame}
 
-% 12 -------------------------------------------------------------------------
+% Slide 12
 \begin{frame}{Openness must also deliver informational justice}
   \begin{columns}[T,onlytextwidth]
     \column{.53\textwidth}
       \tagline{Three dimensions}
       \vspace{0.25cm}
-      \begin{itemize}\setlength\itemsep{0.35cm}
+      \begin{itemize}\setlength\itemsep{0.22cm}
         \item \textbf{Distribution:} equitable access to information and infrastructure.
         \item \textbf{Recognition:} respect for diverse people, knowledge, and epistemologies.
         \item \textbf{Participation:} meaningful inclusion in producing and using knowledge.
@@ -500,7 +426,7 @@
     \column{.43\textwidth}
       \tagline{Ethical safeguards}
       \vspace{0.25cm}
-      \begin{itemize}\setlength\itemsep{0.35cm}
+      \begin{itemize}\setlength\itemsep{0.22cm}
         \item Consent and risk assessment
         \item Privacy and controlled access
         \item Collective and Indigenous data rights
@@ -509,58 +435,7 @@
   \end{columns}
 \end{frame}
 
-% 26 -------------------------------------------------------------------------
-%\begin{frame}{Open infrastructures advance a focused set of SDGs}
-%  \begin{columns}[T,onlytextwidth]
-%    \column{.48\textwidth}
-%      \keypoint{SDG 4 -- Quality Education}{Open scientific knowledge strengthens higher education, research, and information literacy.}
-%      \vspace{0.22cm}
-
-%      \keypoint{SDG 9 -- Innovation and Infrastructure}{Robust, interoperable digital systems provide the backbone for scientific innovation.}
-%      \vspace{0.22cm}
-
-%      \keypoint{SDG 10 -- Reduced Inequalities}{Open access reduces institutional, regional, and economic asymmetries in knowledge.}
-%    \column{.48\textwidth}
-%      \keypoint{SDG 16 -- Strong Institutions}{Transparent information systems support accountability, ethical governance, and evidence-based decisions.}
-%      \vspace{0.22cm}
-
-%      \keypoint{SDG 17 -- Partnerships}{Shared standards and interoperable networks enable national and international cooperation.}
-%      \vspace{0.30cm}
-
-%      \small\color{Muted}\textbf{Cross-cutting effect:} preservation and responsible reuse also support sustainable cities, institutions, and consumption of digital resources.
-%  \end{columns}
-%\end{frame}
-
-
-% 13 -------------------------------------------------------------------------
-%\begin{frame}{Libraries are becoming critical knowledge infrastructure}
-%  \begin{columns}[T,onlytextwidth]
-%    \column{.46\textwidth}
-%      \tagline{An institutional evolution}
-%      \vspace{0.30cm}
-%      \begin{tikzpicture}[x=1cm,y=1cm]
-%        \draw[very thick,Cyan] (.2,0) -- (.2,-3.55);
-%        \foreach \y/\n/\head/\copy in {0/1/Collections/Acquire and provide access,-1.65/2/Digital services/Connect repositories and systems,-3.3/3/Infrastructure/Steward data and long-term access}{
-%          \fill[Teal] (.2,\y) circle (3.5pt);
-%          \node[anchor=west,text=Navy,font=\bfseries\small] at (.48,\y+.15) {\n\quad \head};
-%          \node[anchor=west,text=Muted,font=\scriptsize] at (.48,\y-.25) {\copy};
-%        }
-%      \end{tikzpicture}
-%    \column{.50\textwidth}
-%      \tagline{The professional role expands}
-%      \vspace{0.22cm}
-%      \begin{itemize}\setlength\itemsep{0.27cm}
-%        \item Data stewardship and metadata enrichment
-%        \item Digital preservation and authenticity
-%        \item Licensing, privacy, and ethical guidance
-%        \item Persistent identifiers and interoperability
-%        \item Digital literacy and public mediation
-%        \item Coordination across research, IT, government, and society
-%      \end{itemize}
-%  \end{columns}
-%\end{frame}
-
-% 14 -------------------------------------------------------------------------
+% Slide 13
 \begin{frame}{Implementation depends on human mediation}
   \begin{columns}[T,onlytextwidth]
     \column{.31\textwidth}
@@ -586,78 +461,42 @@
         \item Sustainable ownership
       \end{itemize}
     \column{.31\textwidth}
-      \tagline{Digital literacy}
+      \tagline{Skills development}
       \vspace{0.23cm}
       \textbf{Enable critical use}
       \vspace{0.16cm}
       \begin{itemize}\setlength\itemsep{0.22cm}
-        \item Practical training
+        \item Education and training
         \item Limits and uncertainty
         \item Reproducible practices
-        \item Responsible AI use
+        \item Recognition of data and software
       \end{itemize}
   \end{columns}
   \vfill
-  \begin{center}\small\color{Muted}Multidisciplinary support teams translate Open Science principles into everyday research practice.\end{center}
+  \begin{center}\small\color{Muted}Reward data sharing, software, review, and curation. Support teams turn principles into practice.\end{center}
 \end{frame}
 
-% 15 -------------------------------------------------------------------------
-\begin{frame}{Brazil already has the foundations of a national ecosystem}
-  \begin{columns}[T,onlytextwidth]
-    \column{.58\textwidth}
-      \begin{center}\resizebox{.94\linewidth}{!}{\BrazilEcosystemDiagram}\end{center}
-    \column{.38\textwidth}
-      \vspace{0.05cm}
-      \tagline{Strategic assets}
-      \vspace{0.18cm}
-      \begin{itemize}\setlength\itemsep{0.18cm}
-        \item SciELO and open journals
-        \item BDTD and Oasisbr
-        \item BrCris and research integration
-        \item Cariniana and digital preservation
-        \item Data, citizen science, and software networks
-      \end{itemize}
-      \vspace{0.15cm}
-      \small\color{Muted}The next step is coordinated governance, stable funding, and stronger interoperability.
-  \end{columns}
+% Slide 14
+\begin{frame}{Brazil connects public services across the research cycle}
+\begin{columns}[T,onlytextwidth]\column{.48\textwidth}\tagline{Collect, publish, and connect}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item SciELO, journals, and institutional repositories
+\item BDTD for graduate research
+\item Oasisbr for discovery across collections
+\end{itemize}
+\column{.48\textwidth}\tagline{Integrate, identify, and preserve}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item BrCris for connections across the research system
+\item Laguna for heterogeneous data integration
+\item dARK for identifiers and Cariniana for preservation
+\end{itemize}
+\end{columns}
+\vfill
+\begin{center}\small Shared standards and stable funding support interoperability and institutional autonomy.\end{center}
 \end{frame}
 
-% 16 -------------------------------------------------------------------------
-% Source: Action Plan for International Cooperation in Open Science, 2025.
-% https://en.most.gov.cn/pressroom/202512/t20251219_195559.html
-\begin{frame}{Ibict can contribute across all six objectives}
-  \small
-  \begin{columns}[T,onlytextwidth]
-    \column{.49\textwidth}
-      \tagline{Governance, data, infrastructure}
-      \vspace{0.18cm}
-      \begin{itemize}\setlength\itemsep{0.25cm}
-        \item \textbf{1 \; Governance:} policy expertise, networks, standards, and monitoring.
-        \item \textbf{2 \; Open data:} Oasisbr, BDTD, metadata aggregation, and interoperability.
-        \item \textbf{3 \; Infrastructure:} BrCris, Laguna, Cariniana, dARK, and public digital services.
-      \end{itemize}
-    \column{.49\textwidth}
-      \tagline{Communication, participation, capacity}
-      \vspace{0.18cm}
-      \begin{itemize}\setlength\itemsep{0.25cm}
-        \item \textbf{4 \; Communication:} repositories, journals, open publishing, and persistent access.
-        \item \textbf{5 \; Engagement:} information literacy, citizen science, and multilingual access.
-        \item \textbf{6 \; Capacity:} training, South--South exchange, and open technology transfer.
-      \end{itemize}
-  \end{columns}
-  \vfill
-  \begin{center}
-    \colorbox{Mist}{\parbox{.90\linewidth}{\centering\small Brazil can move from endorsing shared principles to delivering interoperable services, professional capacity, and evidence for cooperation.}}
-
-    \vspace{0.08cm}
-    {\tiny\color{Muted}\href{https://en.most.gov.cn/pressroom/202512/t20251219_195559.html}{Mapped to the Action Plan for International Cooperation in Open Science, 2025.}}
-  \end{center}
-\end{frame}
-
-% 17 -------------------------------------------------------------------------
-% Sources: https://rbrd.ibict.br/ ; https://www.reprodutibilidade.org/ ;
-% https://www.lareferencia.info/ ; https://coar-repositories.org/
-\begin{frame}{Networks connect national capacity with global cooperation}
+% Slide 15
+\begin{frame}{Networks connect national expertise with global cooperation}
   \begin{center}
   \begin{tikzpicture}[x=1cm,y=1cm]
     % Connections are drawn first so they remain behind the network nodes.
@@ -693,103 +532,8 @@
   \end{center}
 \end{frame}
 
-% 17 -------------------------------------------------------------------------
-\begin{frame}{Ibict connects the national ecosystem in layers}
-  \small
-  \begin{columns}[T,onlytextwidth]
-    \column{.48\textwidth}
-      \tagline{Collect and publish}
-      \vspace{0.10cm}
-      \begin{itemize}\setlength\itemsep{0.10cm}
-        \item Institutional repositories and digital libraries
-        \item Brazilian Digital Library of Theses and Dissertations
-        \item Journal and publication support services
-      \end{itemize}
-      \vspace{0.10cm}
-      \tagline{Aggregate and connect}
-      \vspace{0.10cm}
-      \begin{itemize}\setlength\itemsep{0.10cm}
-        \item Oasisbr for unified discovery
-        \item National repository networks and shared standards
-        \item International exchange through open protocols
-      \end{itemize}
-    \column{.48\textwidth}
-      \tagline{Analyze and govern}
-      \vspace{0.10cm}
-      \begin{itemize}\setlength\itemsep{0.10cm}
-        \item BrCris for research information and policy intelligence
-        \item Laguna for semantic integration and large-scale analysis
-      \end{itemize}
-      \vspace{0.10cm}
-      \tagline{Preserve and identify}
-      \vspace{0.10cm}
-      \begin{itemize}\setlength\itemsep{0.10cm}
-        \item Cariniana for distributed digital preservation
-        \item dARK for persistent, traceable identifiers
-      \end{itemize}
-      \vspace{0.12cm}
-      \color{Muted}Together, these layers preserve institutional autonomy while enabling national-scale discovery and reuse.
-  \end{columns}
-\end{frame}
-
-% 17 -------------------------------------------------------------------------
-%\begin{frame}{Scientific infrastructure enables sustainable development}
-%  \begin{center}\resizebox{.90\linewidth}{!}{\SustainableDevelopmentDiagram}\end{center}
-%  \vspace{-0.06cm}
-
-%  \begin{columns}[T,onlytextwidth]
-%    \column{.24\textwidth}\centering
-%      \textbf{Integrated data}\\[-1pt]{\scriptsize\color{Muted}Open, governed, interoperable}
-%    \column{.24\textwidth}\centering
-%      \textbf{Accessible knowledge}\\[-1pt]{\scriptsize\color{Muted}Structured and discoverable}
-%    \column{.24\textwidth}\centering
-%      \textbf{Evidence-based innovation}\\[-1pt]{\scriptsize\color{Muted}Research translated into action}
-%    \column{.24\textwidth}\centering
-%      \textbf{Public benefit}\\[-1pt]{\scriptsize\color{Muted}More resilient and equitable systems}
-%  \end{columns}
-%\end{frame}
-
-% 18 -------------------------------------------------------------------------
-\begin{frame}{Three infrastructures strengthen Brazilian research}
-  \begin{columns}[T,onlytextwidth]
-    \column{.31\textwidth}
-      \tagline{BrCris}
-      \vspace{0.23cm}
-      \textbf{Connects the research system}
-      \vspace{0.15cm}
-      \begin{itemize}\setlength\itemsep{0.18cm}
-        \item Researchers and institutions
-        \item Projects and funding
-        \item Outputs and infrastructures
-      \end{itemize}
-      \small\color{Muted}Enables visibility, governance, assessment, and evidence-based policy.
-    \column{.31\textwidth}
-      \tagline{dARK network}
-      \vspace{0.23cm}
-      \textbf{Keeps resources identifiable}
-      \vspace{0.15cm}
-      \begin{itemize}\setlength\itemsep{0.18cm}
-        \item Persistent ARK identifiers
-        \item Traceability and citation
-        \item Long-term access
-      \end{itemize}
-      \small\color{Muted}Protects reproducibility and institutional memory from broken links.
-    \column{.31\textwidth}
-      \tagline{Project Laguna}
-      \vspace{0.23cm}
-      \textbf{Integrates heterogeneous data}
-      \vspace{0.15cm}
-      \begin{itemize}\setlength\itemsep{0.18cm}
-        \item Semantic enrichment
-        \item Interoperability
-        \item Large-scale discovery
-      \end{itemize}
-      \small\color{Muted}Transforms isolated sources into a shared analytical environment.
-  \end{columns}
-\end{frame}
-
-% Project Laguna architecture ------------------------------------------------
 {\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+% Slide 16
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center)
@@ -800,112 +544,18 @@
   \end{tikzpicture}
 \end{frame}}
 
-% 19 -------------------------------------------------------------------------
-\begin{frame}{BrCris creates a national view of Brazilian research}
-  \begin{columns}[T,onlytextwidth]
-    \column{.60\textwidth}
-      \tagline{Brazilian Current Research Information System}
-      \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.30cm}
-        \item Developed and led by \textbf{Ibict}; officially established in 2014.
-        \item Integrates, retrieves, certifies, and visualizes information about Brazil's research ecosystem.
-        \item Organizes fragmented records into a unified national model aligned with international standards.
-        \item Provides free access for researchers, managers, funders, journalists, and citizens.
-      \end{itemize}
-    \column{.36\textwidth}
-      \vspace{0.28cm}
-      \begin{center}
-        {\fontsize{32}{36}\selectfont\bfseries\color{Teal}15.9M}
-        \vspace{0.08cm}
-
-        {\small\textbf{publications indexed}}
-        \vspace{0.25cm}
-
-        {\scriptsize\color{Muted}Platform count displayed in July 2026}
-      \end{center}
-      \vspace{0.25cm}
-      \colorbox{Mist}{\parbox{.90\linewidth}{\centering\small A public gateway to understand who produces knowledge, where, with whom, and with what results.}}
-  \end{columns}
+% Slide 17
+\begin{frame}{BrCris connects the Brazilian research ecosystem}
+\begin{columns}[T,onlytextwidth]\column{.52\textwidth}\tagline{A national research information system}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item Connect researchers, institutions, projects, and outputs.
+\item Explore relationships to support research management.
+\item Investigate further interoperability with OpenAlex and OpenCitations.
+\end{itemize}
+\small\color{Muted}15.9M publications: platform count displayed in July 2026.\column{.44\textwidth}\vspace{.18cm}\href{https://brcris.ibict.br/}{\includegraphics[width=\linewidth,trim=0 270 0 0,clip]{assets/screenshot-brcris.png}}\par\vspace{.20cm}\small Further integrations are a cooperation opportunity to assess.\end{columns}
 \end{frame}
 
-% 20 -------------------------------------------------------------------------
-%\begin{frame}{BrCris connects actors, outputs, and infrastructures}
-%  \begin{columns}[T,onlytextwidth]
-%    \column{.31\textwidth}
-%      \tagline{Research actors}
-%      \vspace{0.22cm}
-%      \begin{itemize}\setlength\itemsep{0.24cm}
-%        \item Researchers
-%        \item Institutions
-%        \item Research groups
-%        \item Graduate programs
-%        \item Funders and projects
-%      \end{itemize}
-%    \column{.31\textwidth}
-%      \tagline{Research outputs}
-%      \vspace{0.22cm}
-%      \begin{itemize}\setlength\itemsep{0.24cm}
-%        \item Publications
-%        \item Theses and dissertations
-%        \item Scientific datasets
-%        \item Patents
-%        \item Software
-%      \end{itemize}
-%    \column{.31\textwidth}
-%      \tagline{Integrated sources}
-%      \vspace{0.22cm}
-%      \begin{itemize}\setlength\itemsep{0.18cm}
-%        \item Lattes and CNPq directories
-%        \item Oasisbr and Capes/Sucupira
-%        \item OpenAlex and OpenAIRE
-%        \item DOAJ, INPI, and Espacenet
-%        \item NDLTD, ROR, and Wikidata
-%      \end{itemize}
-%  \end{columns}
-%  \vfill
-%  {\tiny\color{Muted}Source: \href{https://brcris.ibict.br/en/about}{official BrCris About page} and \href{https://brcris.ibict.br/en/faq}{FAQ}, accessed 28 Aug. 2026.}
-%\end{frame}
-
-% 21 -------------------------------------------------------------------------
-%\begin{frame}{Integration turns records into policy intelligence}
-%  \begin{columns}[T,onlytextwidth]
-%    \column{.47\textwidth}
-%      \tagline{Information pipeline}
-%      \vspace{0.22cm}
-%      \begin{enumerate}\setlength\itemsep{0.27cm}
-%        \item Collect records from national and international sources.
-%        \item Standardize, normalize, and deduplicate the metadata.
-%        \item Connect people, organizations, projects, and results.
-%        \item Provide search, individual profiles, and indicator dashboards.
-%      \end{enumerate}
-%    \column{.49\textwidth}
-%      \tagline{Decisions it can support}
-%      \vspace{0.22cm}
-%      \begin{itemize}\setlength\itemsep{0.27cm}
-%        \item Map collaboration networks and scientific communities.
-%        \item Compare institutional and thematic research profiles.
-%        \item Identify strengths, gaps, and emerging trends.
-%        \item Improve transparency, visibility, and research assessment.
-%        \item Ground science, technology, and innovation policies in evidence.
-%      \end{itemize}
-%  \end{columns}
-%  \vfill
-%  {\tiny\color{Muted}Source: \href{https://brcris.ibict.br/en/about}{official BrCris About page}, \href{https://brcris.ibict.br/en/dashboards}{Dashboards}, and \href{https://brcris.ibict.br/en/faq}{FAQ}, accessed 28 Aug. 2026.}
-%\end{frame}
-
-% BrCris service interface ---------------------------------------------------
-{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
-\begin{frame}[plain]
-  \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=center] at (current page.center)
-      {\href{https://brcris.ibict.br/}{\includegraphics[width=.995\paperwidth,trim=0 270 0 0,clip]{assets/screenshot-brcris.png}}};
-    \node[anchor=south east,fill=white,inner sep=3pt] at
-      ([xshift=-.34cm,yshift=1.70cm]current page.south east)
-      {\includegraphics[height=1.70cm]{assets/qr-brcris.png}};
-  \end{tikzpicture}
-\end{frame}}
-
-% 22 -------------------------------------------------------------------------
+% Slide 18
 \begin{frame}{Oasisbr connects more than 6.5 million open digital objects}
   \begin{columns}[T,onlytextwidth]
     \column{.43\textwidth}
@@ -926,19 +576,19 @@
       \vspace{0.22cm}
 
       {\Large\bfseries\color{Coral}\raisebox{0.05ex}{$\sim$}2,000}\par
-      {\small\color{Muted}information sources --- repositories and scientific journals across Brazil}
+      {\small\color{Muted}information sources: repositories and scientific journals across Brazil}
     \column{.10\textwidth}
   \end{columns}
   \serviceqr{https://oasisbr.ibict.br/}{assets/qr-oasisbr.png}
 \end{frame}
 
-% 23 -------------------------------------------------------------------------
+% Slide 19
 \begin{frame}{BDTD gives visibility to graduate research}
   \begin{columns}[T,onlytextwidth]
     \column{.58\textwidth}
       \tagline{A national service since 2002}
       \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.28cm}
+      \begin{itemize}\setlength\itemsep{0.18cm}
         \item Conceived, developed, and maintained by Ibict.
         \item Integrates theses and dissertations from Brazilian teaching and research institutions.
         \item Also includes records of works defended by Brazilians at institutions abroad.
@@ -947,7 +597,7 @@
     \column{.28\textwidth}
       \tagline{Public value}
       \vspace{0.22cm}
-      \begin{itemize}\setlength\itemsep{0.26cm}
+      \begin{itemize}\setlength\itemsep{0.18cm}
         \item Visibility for postgraduate research
         \item Shared metadata standards
         \item Institutional interoperability
@@ -959,68 +609,123 @@
   \serviceqr{https://bdtd.ibict.br/}{assets/qr-bdtd.png}
 \end{frame}
 
-% 24 -------------------------------------------------------------------------
-\begin{frame}{Oasisbr, BDTD, and BrCris play distinct roles}
-  \small
-  \begin{tabular}{@{}p{2.0cm}p{3.3cm}p{3.45cm}p{3.25cm}@{}}
-    \toprule
-    \textbf{Service} & \textbf{Primary question} & \textbf{Scope} & \textbf{Strategic role} \\
-    \midrule
-    Oasisbr & What open research outputs can I discover? & Publications, data, books, conference works, theses, and more & Multidisciplinary access and national/international aggregation \\
-    \addlinespace[0.13cm]
-    BDTD & What graduate research has been produced? & Brazilian theses and dissertations, including records from abroad & Visibility and governance of postgraduate knowledge \\
-    \addlinespace[0.13cm]
-    BrCris & How is the research ecosystem connected? & Actors, organizations, projects, programs, outputs, patents, and software & Research intelligence, indicators, governance, and policy support \\
-    \bottomrule
-  \end{tabular}
-  \vfill
-  \begin{center}\colorbox{Mist}{\parbox{.91\linewidth}{\centering\small Together they connect \textbf{discovery}, \textbf{specialized graduate knowledge}, and \textbf{system-level intelligence}.}}\end{center}
-  {\tiny\color{Muted}Sources: official \href{https://oasisbr.ibict.br/}{Oasisbr}, \href{https://bdtd.ibict.br/}{BDTD}, and \href{https://brcris.ibict.br/en}{BrCris} portals, accessed 28 Aug. 2026.}
+% Slide 20
+\begin{frame}{dARK connects persistent identification and shared governance}
+\begin{columns}[T,onlytextwidth]\column{.48\textwidth}\tagline{Institutional responsibility}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item Decentralized identifiers based on ARK
+\item Traceable records and shared operational roles
+\item Governance, funding, and maintenance designed from the start
+\end{itemize}
+\column{.48\textwidth}\href{https://www.dark-pid.net/}{\includegraphics[width=\linewidth,trim=0 270 0 0,clip]{assets/screenshot-dark.png}}\par\small LA Referencia collaboration, with support from Invest in Open Infrastructure.\end{columns}
+\vfill
+\begin{center}\small Identification supports traceability. Preservation keeps the underlying resources available.\end{center}
 \end{frame}
 
-% 25 -------------------------------------------------------------------------
-\begin{frame}{dARK turns persistence into regional sovereignty}
-  \small
+% Slide 21
+\begin{frame}{Information science is the foundation of reliable AI}
+  \begin{center}\resizebox{.94\linewidth}{!}{\KnowledgeValueChainDiagram}\end{center}
+  \vspace{-0.08cm}
+
   \begin{columns}[T,onlytextwidth]
-    \column{.51\textwidth}
-      \tagline{What it adds to ARK}
-      \vspace{0.24cm}
-      \begin{itemize}\setlength\itemsep{0.18cm}
-        \item \textbf{Decentralization:} participating institutions share operational responsibility.
-        \item \textbf{Traceability:} identifier events remain auditable over time.
-        \item \textbf{Resilience:} distributed governance reduces single points of failure.
-        \item \textbf{Sovereignty:} regional institutions define policies and priorities.
-      \end{itemize}
-    \column{.45\textwidth}
-      \tagline{How it works with Oasisbr}
-      \vspace{0.24cm}
-      \begin{enumerate}\setlength\itemsep{0.18cm}
-        \item Repositories expose qualified metadata through open protocols.
-        \item Oasisbr aggregates and validates the records.
-        \item dARK assigns persistent identifiers to eligible objects.
-        \item Users discover content centrally while access remains with the source institution.
-      \end{enumerate}
+    \column{.32\textwidth}\centering
+      \textbf{Information science}\\[-1pt]
+      {\scriptsize\color{Muted}Organises, curates, represents, and mediates knowledge}
+    \column{.32\textwidth}\centering
+      \textbf{Data science}\\[-1pt]
+      {\scriptsize\color{Muted}Analyses patterns, models phenomena, and extracts value}
+    \column{.32\textwidth}\centering
+      \textbf{Artificial intelligence}\\[-1pt]
+      {\scriptsize\color{Muted}Automates cognition, prediction, and language interaction}
   \end{columns}
 \end{frame}
 
-% dARK service interface -----------------------------------------------------
-{\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
-\begin{frame}[plain]
-  \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=center] at (current page.center)
-      {\href{https://www.dark-pid.net/}{\includegraphics[width=.995\paperwidth,trim=0 270 0 0,clip]{assets/screenshot-dark.png}}};
-    \node[anchor=south east,fill=white,inner sep=3pt] at
-      ([xshift=-.34cm,yshift=.34cm]current page.south east)
-      {\includegraphics[height=1.70cm]{assets/qr-dark.png}};
-  \end{tikzpicture}
-\end{frame}}
+% Slide 22
+\begin{frame}{Trustworthy AI begins with trustworthy research infrastructure}
+  \begin{center}\resizebox{.90\linewidth}{!}{\OpenInfrastructureDiagram}\end{center}
+  \vspace{0.18cm}
+  \begin{center}\small\color{Muted}Preservation and interoperability turn stored objects into reusable evidence and enable the trusted data spaces and AI applications called for in Objective 3.\end{center}
+\end{frame}
 
+% Slide 23
+\begin{frame}{Semantic systems connect meaning, not only keywords}
+  \begin{columns}[T,onlytextwidth]
+    \column{.58\textwidth}
+      \tagline{A grounded retrieval flow}\par
+      \vspace{0.35cm}
+      \begin{tikzpicture}[node distance=.25cm, every node/.style={align=center}]
+        \node[draw=Navy,rounded corners=3pt,fill=Mist,minimum width=2.05cm,minimum height=1.05cm] (q) {\small User\\question};
+        \node[draw=Navy,rounded corners=3pt,fill=Mist,minimum width=2.05cm,minimum height=1.05cm,right=.35cm of q] (e) {\small Semantic\\embedding};
+        \node[draw=Navy,rounded corners=3pt,fill=Mist,minimum width=2.05cm,minimum height=1.05cm,right=.35cm of e] (r) {\small Curated\\collection};
+        \draw[very thick,->,Coral] (q) -- (e);
+        \draw[very thick,->,Coral] (e) -- (r);
+        \node[draw=Navy,rounded corners=3pt,fill=Cyan!18,minimum width=3.05cm,minimum height=1.05cm,below=.55cm of e] (a) {\small Grounded answer\\with evidence};
+        \draw[very thick,->,Teal] (r.south) |- (a.east);
+        \draw[very thick,->,Teal] (q.south) |- (a.west);
+      \end{tikzpicture}
+    \column{.38\textwidth}
+      \tagline{What makes it work}
+      \vspace{0.22cm}
+      \begin{itemize}\setlength\itemsep{0.28cm}
+        \item Controlled vocabularies and ontologies reduce ambiguity.
+        \item Multilingual embeddings retrieve concepts across languages.
+        \item RAG links answers to retrieved documents.
+        \item Check sources, omissions, and uncertain answers.
+      \end{itemize}
+  \end{columns}
+\end{frame}
 
+% Slide 24
+\begin{frame}{Applied AI creates value when the information base is ready}
+  \small
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.35cm}>{\raggedright\arraybackslash}p{3.15cm}>{\raggedright\arraybackslash}p{5.9cm}@{}}
+    \toprule
+    \textbf{Application} & \textbf{AI capability} & \textbf{Public-interest value} \\
+    \midrule
+    ServicesPI & Semantic search + NLP & Natural-language discovery across complex patent collections \\
+    \addlinespace[0.12cm]
+    Patente.IA & Text + image similarity & Broader detection of related inventions and prior art \\
+    \addlinespace[0.12cm]
+    RDAPP & NLP + semantic retrieval & Structured access and analysis across public-policy documents \\
+    \addlinespace[0.12cm]
+    SAVITS & BI + ML + LLM & Monitoring and analysis of social technology policies \\
+    \bottomrule
+  \end{tabular}
+  \vfill
+  \begin{center}\colorbox{Mist}{\parbox{.9\linewidth}{\centering\small Public control of models and infrastructure requires skills development, source checking, and human oversight.}}\end{center}
+\end{frame}
 
+% Slide 25
+\begin{frame}{Ibict can contribute across all six objectives}
+  \small
+  \begin{columns}[T,onlytextwidth]
+    \column{.49\textwidth}
+      \tagline{Governance, data, infrastructure}
+      \vspace{0.18cm}
+      \begin{itemize}\setlength\itemsep{0.25cm}
+        \item \textbf{1 \; Governance:} policy expertise, networks, standards, and monitoring.
+        \item \textbf{2 \; Open data:} Oasisbr, BDTD, metadata aggregation, and interoperability.
+        \item \textbf{3 \; Infrastructure:} BrCris, Laguna, Cariniana, dARK, and public digital services.
+      \end{itemize}
+    \column{.49\textwidth}
+      \tagline{Communication, participation, skills}
+      \vspace{0.18cm}
+      \begin{itemize}\setlength\itemsep{0.25cm}
+        \item \textbf{4 \; Communication:} repositories, journals, open publishing, and persistent access.
+        \item \textbf{5 \; Engagement:} information literacy, citizen science, and multilingual access.
+        \item \textbf{6 \; Skills:} training, South--South exchange, and open technology transfer.
+      \end{itemize}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \colorbox{Mist}{\parbox{.90\linewidth}{\centering\small Brazil can move from endorsing shared principles to delivering interoperable services, professional skills, and evidence for cooperation.}}
 
-% Source: Action Plan for International Cooperation in Open Science, 2025.
-% https://en.most.gov.cn/pressroom/202512/t20251219_195559.html
-% 28 -------------------------------------------------------------------------
+    \vspace{0.08cm}
+    {\tiny\color{Muted}\href{https://en.most.gov.cn/pressroom/202512/t20251219_195559.html}{Mapped to the Action Plan for International Cooperation in Open Science, 2025.}}
+  \end{center}
+\end{frame}
+
+% Slide 26
 \begin{frame}{National delivery enables international cooperation}
   \begin{columns}[T,onlytextwidth]
     \column{.48\textwidth}
@@ -1036,43 +741,65 @@
       \tagline{Multilateral mechanism}
       \vspace{0.20cm}
       \begin{itemize}\setlength\itemsep{0.28cm}
-        \item A permanent platform for exchange and joint delivery
+        \item An exchange mechanism with a defined added value
         \item Coordinated resource allocation and practical pilot projects
         \item Dynamic monitoring and transparent reporting
         \item Rotating meetings to share evidence and improve practice
       \end{itemize}
   \end{columns}
   \vfill
-  \begin{center}\colorbox{Mist}{\parbox{.9\linewidth}{\centering\small Domestic capacity is the foundation for equal participation, joint contribution, and shared benefits.}}\end{center}
+  \begin{center}\colorbox{Mist}{\parbox{.9\linewidth}{\centering\small Strong national institutions are the foundation for equal participation, joint contribution, and shared benefits.}}\end{center}
 \end{frame}
 
-% 29 -------------------------------------------------------------------------
-\begin{frame}{Measurable commitments make cooperation credible}
-  \begin{columns}[T,onlytextwidth]
-    \column{.48\textwidth}
-      \tagline{Infrastructure and knowledge}
-      \vspace{0.18cm}
-      \begin{itemize}\setlength\itemsep{0.25cm}
-        \item Platforms connected through open standards
-        \item Data shared with ethical access and benefit safeguards
-        \item Public digital services jointly developed or reused
-        \item Papers, preprints, and multilingual outputs made accessible
-      \end{itemize}
-    \column{.48\textwidth}
-      \tagline{People and cooperation}
-      \vspace{0.18cm}
-      \begin{itemize}\setlength\itemsep{0.25cm}
-        \item Researchers and professionals trained across borders
-        \item Young people and the public engaged in Open Science
-        \item South--South projects and exchanges sustained
-        \item Technologies transferred and adapted to local needs
-      \end{itemize}
-  \end{columns}
-  \vfill
-  \begin{center}\alert{Monitor reach, interoperability, equity, reuse, and local capability.}\end{center}
+% Slide 27
+\begin{frame}{A joint pilot for policy monitoring and fair research assessment}
+\begin{columns}[T,onlytextwidth]\column{.48\textwidth}\tagline{Public policy monitoring}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item Start with policies related to social technologies.
+\item Track implementation, reach, and reported outcomes.
+\item Interpret evidence with managers and participating communities.
+\end{itemize}
+\column{.48\textwidth}\tagline{Research assessment tools}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item Connect repositories, journals, and research information systems.
+\item Document diverse contributions and their social use.
+\item Support contextual assessment by researchers and reviewers.
+\end{itemize}
+\end{columns}
+\vfill
+\begin{center}\small Proposal for co-design: agree partners, responsibilities, resources, safeguards, and a timetable.\end{center}
 \end{frame}
 
-% 30 -------------------------------------------------------------------------
+% Slide 28
+\begin{frame}{Connected evidence can support policy and assessment tools}
+\small\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{4.6cm}@{}}\toprule\textbf{Evidence to connect} & \textbf{Proposed tool} & \textbf{Use to test}\\\midrule Publications, data, and software & Links between repositories, journals, and research records & Trace contributions and reuse across outputs\\\addlinespace[.25cm]Policy documents and project reports & Policy monitoring dashboard with source links & Examine implementation, coverage, and evidence gaps\\\addlinespace[.25cm]Reviews and community accounts & Contextual evidence portfolios for qualitative review & Examine social use, local relevance, and differing perspectives\\\bottomrule\end{tabular}\vfill\begin{center}\small Start with an agreed sample. Document provenance, permissions, uncertainty, and correction procedures.\end{center}
+\end{frame}
+
+% Slide 29
+\begin{frame}{CoARA provides a reference for fairer research assessment}
+\begin{columns}[T,onlytextwidth]\column{.48\textwidth}\tagline{Assessment principles}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item Recognize diverse outputs, activities, roles, and languages.
+\item Prioritize qualitative judgement with peer review.
+\item Use quantitative indicators responsibly and in context.
+\end{itemize}
+\column{.48\textwidth}\tagline{Implications for the pilot}\par\vspace{.20cm}
+\begin{itemize}\setlength\itemsep{.22cm}
+\item Avoid inappropriate use of journal metrics and the h-index.
+\item Develop criteria with researchers and assessors.
+\item Test tools for bias, transparency, and practical usefulness.
+\end{itemize}
+\end{columns}
+\vfill
+\begin{center}\small {\footnotesize Coalition for Advancing Research Assessment. Reference for the proposal, without implying institutional membership.}\\[.10cm]{\tiny Source: \href{https://www.coara.org/agreement/the-commitments/}{CoARA commitments}, especially 1--3, 6, 7, and 10.}\end{center}
+\end{frame}
+
+% Slide 30
+\begin{frame}{What would success look like?}
+\small\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{5.2cm}>{\raggedright\arraybackslash}p{3.9cm}@{}}\toprule\textbf{Intended result} & \textbf{Evidence to collect} & \textbf{Review question}\\\midrule Useful policy monitoring & Documented use by managers and communities & Did the evidence inform action?\\\addlinespace[.22cm]More inclusive assessment & Contributions recognized across languages, roles, and outputs & Whose work became visible?\\\addlinespace[.22cm]Traceable social contribution & Cases of use, participant accounts, and contextual review & What changed, for whom?\\\addlinespace[.22cm]Sustainable shared tools & Reuse, maintenance roles, and demonstrated skills & Can partners sustain the work?\\\bottomrule\end{tabular}\vfill\begin{center}\small Agree a baseline and review criteria before the pilot. Assess contribution to outcomes without assuming causality.\end{center}
+\end{frame}
+
+% Slide 31
 \begin{frame}{Brazil can help turn the action plan into shared infrastructure}
   \vspace{0.25cm}
   \begin{center}
@@ -1086,17 +813,17 @@
   \end{center}
   \vspace{0.35cm}
   \begin{center}
-    \Large\color{Navy}\textbf{Connect services + launch pilots + train people + share evidence}
+    \Large\color{Navy}\textbf{Connect services + launch pilots + develop skills + share evidence}
   \end{center}
   \vspace{0.25cm}
   \begin{center}
-    \normalsize\color{Muted}Ibict offers mature public services and regional partnerships that can support equitable, non-commercial, and interoperable cooperation.
+    \normalsize\color{Muted}Ibict can contribute services and partnerships to policy monitoring and fairer research assessment, with social benefit as a shared purpose.
   \end{center}
   \vfill
  % \begin{center}\scriptsize\color{Muted}Condensed and translated from the supplied materials and official Ibict service websites, covering Open Science, AI and data, Brazilian scientific information infrastructures, BrCris, Oasisbr, BDTD, the SDGs, national actions, and implementation pathways. Key frameworks referenced: UNESCO Open Science Recommendation, FAIR, CARE, TRUST, DEIA, DORA, Leiden Manifesto, and CoARA.\end{center}
 \end{frame}
 
-% 31 -------------------------------------------------------------------------
+% Slide 32
 \begin{frame}{Salvador/Brazil connects repository communities in 2027}
   \vspace{-0.08cm}
   \begin{center}
@@ -1126,7 +853,7 @@
       \vspace{0.10cm}
 
       {\normalsize\bfseries\color{Navy}Open Repositories 2027}\par
-      \footnotesize\color{Muted}Salvador, Bahia --- global exchange comes to South America's repository community.
+      \footnotesize\color{Muted}Salvador, Bahia: global exchange comes to South America's repository community.
     \column{.48\textwidth}
       {\footnotesize\bfseries\color{Teal}\MakeUppercase{10--11 June 2027}}\par
       \vspace{0.10cm}
@@ -1140,24 +867,8 @@
   \end{center}
 \end{frame}
 
-% 32 -------------------------------------------------------------------------
-%\begin{frame}{License and reuse}
-%  \vspace{0.52cm}
-%  \begin{minipage}{.82\textwidth}
-%    {\Large\bfseries\color{Navy}Creative Commons}\par
-%    \vspace{0.12cm}
-%    {\large\color{Ink}Attribution--Non Commercial--Share Alike 4.0 International}\par
-%    \vspace{0.48cm}
-
-%    \color{Ink}You may share and adapt this presentation with appropriate attribution, for non-commercial purposes, provided that derivative works use the same license.
-%    \vspace{0.45cm}
-
-%    {\small\color{Muted}Author: Washington L. de Carvalho Segundo}
-%  \end{minipage}
-%\end{frame}
-
-% 33 -------------------------------------------------------------------------
 {\setbeamertemplate{footline}{}\setbeamertemplate{background}{}
+% Slide 33
 \begin{frame}[plain]
   \begin{tikzpicture}[remember picture,overlay]
     \fill[Teal] (current page.south west) rectangle ([xshift=.16cm]current page.north west);
