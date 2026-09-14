@@ -76,14 +76,8 @@
       {\href{#1}{\includegraphics[height=1.45cm]{#2}}};
   \end{tikzpicture}}
 
-% Subtle license watermark used on all content slides. The title and license
-% slides locally disable this background and display the complete mark instead.
-\setbeamertemplate{background}{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=south east,opacity=.10] at
-      ([xshift=-.30cm,yshift=.43cm]current page.south east)
-      {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
-  \end{tikzpicture}}
+% The complete license mark appears only on the title and closing slides.
+\setbeamertemplate{background}{}
 
 % ---------------------------------------------------------------------------
 % Editable monochrome diagrams
@@ -908,8 +902,6 @@
     \node[anchor=south east,fill=white,inner sep=3pt] at
       ([xshift=-.34cm,yshift=1.70cm]current page.south east)
       {\includegraphics[height=1.70cm]{assets/qr-brcris.png}};
-    \node[anchor=south west,opacity=.18] at ([xshift=.34cm,yshift=.34cm]current page.south west)
-      {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
   \end{tikzpicture}
 \end{frame}}
 
@@ -1020,8 +1012,6 @@
     \node[anchor=south east,fill=white,inner sep=3pt] at
       ([xshift=-.34cm,yshift=.34cm]current page.south east)
       {\includegraphics[height=1.70cm]{assets/qr-dark.png}};
-    \node[anchor=south west,opacity=.18] at ([xshift=.34cm,yshift=.34cm]current page.south west)
-      {\href{\ccLicenseURL}{\includegraphics[width=.42cm]{assets/cc-by-nc-sa-4.0.png}}};
   \end{tikzpicture}
 \end{frame}}
 
