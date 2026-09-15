@@ -1,23 +1,18 @@
-# Open Science presentation
+# Presentación sobre ciencia abierta — Español
 
-An English-language Beamer presentation about Open Science, information and
-data science, artificial intelligence, and Brazilian public scientific
-information infrastructures led by Ibict. The narrative connects Brazil's
-experience to the Action Plan for International Cooperation in Open Science.
+La rama `esp` contiene la versión completa en español de la presentación Beamer de 33 diapositivas. La versión inglesa permanece en `main`.
 
-The revised 33-slide deck restores the SDG connection, groups the AI material,
-and includes preprints and publish, review, curate. It proposes a joint pilot
-for monitoring public policies related to social technologies and developing
-fairer research assessment tools, with CoARA as a reference. The updated guide
-provides a complete English speaking script timed for 20 minutes.
+La presentación aborda ciencia abierta, ciencia de la información y de datos, inteligencia artificial e infraestructuras públicas brasileñas de información científica coordinadas por Ibict. Vincula esta experiencia con el Plan de Acción para la Cooperación Internacional en Ciencia Abierta.
 
-## Presentation files
+Incluye la conexión con los ODS, los preprints y el modelo de publicar, revisar y curar. Propone un piloto conjunto para el seguimiento de políticas de tecnologías sociales y una evaluación más justa de la investigación, con CoARA como referencia. El guion en español mantiene una distribución orientativa de 20 minutos, que debe ajustarse mediante ensayo.
 
-- [View or download the latest compiled presentation (PDF)](open-science-presentation.pdf)
-- [Read the complete slide-by-slide presentation guide](presentation-guide.md)
-- [Edit the LaTeX source](main.tex)
+## Archivos
 
-## Local compilation
+- [Presentación completa en español (PDF)](open-science-presentation.pdf)
+- [Guion en español, diapositiva por diapositiva](presentation-guide.md)
+- [Código LaTeX editable](main.tex)
+
+## Compilación local
 
 ```bash
 make setup
@@ -25,38 +20,30 @@ make doctor
 make pdf
 ```
 
-The compiled presentation is written to `build/main.pdf`.
+El proceso genera `build/main.pdf` y actualiza `open-science-presentation.pdf` en la raíz.
 
-The repository also includes the latest compiled release at the project root:
-[open-science-presentation.pdf](open-science-presentation.pdf).
-
-For automatic recompilation while editing:
+Para recompilar automáticamente durante la edición:
 
 ```bash
 make watch
 ```
 
-Press `Control+C` to stop watching.
+Pulse `Control+C` para detenerlo.
 
 ## Overleaf
 
-Upload the repository contents to an Overleaf project and select `main.tex` as
-the main document.
+Suba los archivos de esta rama a un proyecto de Overleaf, seleccione `main.tex` como documento principal y utilice **XeLaTeX** para compilar las fuentes multilingües.
 
-## License
+## Traducción y diagramas
 
-The presentation, LaTeX source, and original visual materials are licensed
-under [CC BY-NC-SA 4.0](LICENSE.md), unless otherwise indicated.
+Se han traducido los textos de las 33 diapositivas y el guion de presentación. Los diagramas TikZ mantienen sus elementos editables. Los diagramas originales de Laguna y Oasisbr conservan su estructura y utilizan rótulos en español superpuestos mediante TikZ, editables en `main.tex`.
 
-## Editable diagrams
+Las marcas, los nombres de servicios, las capturas de sus interfaces, los enlaces y los códigos QR se conservan. El QR de dARK en la diapositiva 20 permite escanear o hacer clic para abrir `https://www.dark-pid.net/`. La diapositiva final mantiene los agradecimientos multilingües.
 
-All presentation diagrams are written in TikZ directly in `main.tex`. Their
-labels, nodes, coordinates, and arrows can be edited without external image
-software. The reusable diagram definitions are grouped near the beginning of
-the file under `Editable monochrome diagrams`.
+Las cifras, fechas y referencias proceden de la versión original y no se han actualizado durante la traducción.
 
-The multilingual closing slide uses embedded Noto fonts from `assets/fonts/`
-so that Latin, Indic, Ethiopic, and Chinese scripts render consistently in
-local builds and Overleaf.
-Those fonts are distributed under the SIL Open Font License in
-`assets/fonts/OFL.txt`.
+## Licencia
+
+La presentación, el código LaTeX y los materiales visuales originales se distribuyen bajo [CC BY-NC-SA 4.0](LICENSE.md), salvo indicación contraria.
+
+Las fuentes Noto incluidas en `assets/fonts/` permiten reproducir los distintos sistemas de escritura. Su licencia SIL Open Font License figura en `assets/fonts/OFL.txt`.

@@ -1,49 +1,38 @@
-OVERLEAF PACKAGE — OPEN SCIENCE
+PAQUETE OVERLEAF — CIENCIA ABIERTA EN ESPAÑOL
 
-1. In Overleaf, select “New Project” > “Upload Project”.
-2. Upload the ZIP file containing this folder.
-3. Keep “main.tex” as the main document.
-4. Compile with pdfLaTeX.
+Rama: esp. La versión inglesa se conserva en main.
 
-LOCAL COMPILATION ON macOS
+1. En Overleaf, seleccione «New Project» > «Upload Project».
+2. Suba un ZIP con los archivos de esta rama.
+3. Seleccione main.tex como documento principal.
+4. Compile con XeLaTeX para utilizar las fuentes multilingües.
 
-This project includes a lightweight Tectonic-based environment.
+COMPILACIÓN LOCAL EN macOS
 
-1. Open Terminal in this project folder.
-2. Run: make setup
-3. Run: make doctor
-4. Run: make pdf
-5. Open: build/main.pdf
+El proyecto utiliza Tectonic.
 
-Useful commands:
-- make watch   Recompile automatically when main.tex changes
-- make clean   Remove auxiliary build files while preserving the PDF
+1. Abra Terminal en esta carpeta.
+2. Ejecute: make setup
+3. Ejecute: make doctor
+4. Ejecute: make pdf
+5. Abra: open-science-presentation.pdf
 
-Requirements:
-- macOS with Homebrew (https://brew.sh)
-- Internet access during the first setup and first compilation
+Comandos adicionales:
+- make watch: recompila automáticamente al editar main.tex.
+- make clean: elimina auxiliares y conserva build/main.pdf.
 
-The TeX package cache is stored locally in .cache/ inside this project.
+Requisitos: macOS con Homebrew e Internet para la configuración inicial
+ y la descarga de paquetes TeX que aún no estén en la caché local.
 
-CONTENTS
-- main.tex: complete 16:9 Beamer presentation in English (30 slides)
-- Makefile and scripts/: local compilation environment
-- assets/open-science-hero.png: explanatory research-cycle diagram
-- assets/open-infrastructure.png: infrastructure-to-trustworthy-insight diagram
-- assets/open-science-brazil.png: Brazilian open-science ecosystem diagram
-- assets/knowledge-value-chain.png: Information Science > Data Science > AI diagram
-- assets/science-to-sustainable-development.png: scientific infrastructure > SDGs diagram
+CONTENIDO
+- main.tex: presentación Beamer 16:9 en español, 33 diapositivas.
+- open-science-presentation.pdf: presentación compilada.
+- presentation-guide.md: guion completo en español, con tiempos orientativos.
+- Makefile y scripts/: entorno de compilación local.
+- assets/: diagramas, capturas, marcas, fuentes y códigos QR.
 
-DESIGN
-- Palette: navy, teal, cyan, coral, and warm off-white
-- All images are local; the project has no external asset dependencies.
-- Image text is intentionally omitted. Labels are rendered in LaTeX for clarity.
+Los textos y los rótulos de los diagramas se han traducido al español.
+Las marcas, las capturas de interfaces y el cierre multilingüe se conservan.
+Los enlaces y códigos QR siguen activos, incluido el QR clicable de dARK.
 
-SOURCE NOTE
-The narrative is a condensed English adaptation of the supplied presentations
-and PDF on Open Science, AI, Data Science, Information Science, Brazilian
-scientific information infrastructures, the SDGs, Ibict's Open Science actions,
-national implementation pathways, and the Brazilian Scientific Research
-Information Ecosystem (BrCris), Oasisbr, and the Brazilian Digital Library of
-Theses and Dissertations (BDTD). Service information was checked against the
-official Ibict websites. The images were newly generated in one consistent style.
+Consulte README.md para más detalles y LICENSE.md para la licencia.
